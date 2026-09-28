@@ -15,21 +15,6 @@ Create zero-dependency, animation-rich HTML presentations that run entirely in t
 4. **Progressive Disclosure** — Read lightweight style indexes first. For bold templates, use small preview cards for style previews and load the full `design.md` only after the user picks that template.
 5. **Fixed 16:9 Stage (NON-NEGOTIABLE)** — Every deck uses a 1920×1080 slide canvas scaled as a whole to the viewport. Slides must stay 16:9 on every screen, including phones. Do not reflow slide content to fit the device.
 
-## Project Collaboration Workflow
-
-For the annual life report in this workspace:
-
-- Do not reference or use files under `back/` as source material.
-- During discussion, update all three working documents together:
-   - `annual-life-report-slides.md` — text shown on slides
-   - `annual-life-report-notes.md` — speaker notes and spoken script
-   - `annual-life-report-layout.md` — layout, animation, and interaction behavior
-- Keep slide text concise. Do not move speaker notes or layout instructions into the slide-text document.
-- Do not modify or generate HTML while discussing content.
-- Only modify or generate the HTML presentation after the user explicitly says `生成簡報`.
-- When generating the presentation, use the three working documents as the source of truth and continue editing the existing HTML presentation by default.
-- Only ignore existing HTML files and create the presentation from scratch when the user explicitly requests that it not depend on existing HTML.
-
 ## Design Aesthetics
 
 You tend to converge toward generic, "on distribution" outputs. In frontend design, this creates what users call the "AI slop" aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.

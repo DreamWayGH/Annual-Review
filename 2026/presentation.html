@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>年度人生發展成果報告 · Willie Chen</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   FIXED 16:9 STAGE: MANDATORY BASE STYLES
+   Include this ENTIRE file in every presentation.
+   Slides are authored at 1920×1080 and scaled as a whole.
+   =========================================== */
+
+/* 1. Lock the browser viewport */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+
+/* 2. Full-window deck viewport */
+.deck-viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+
+/* 3. Fixed 16:9 design canvas.
+   JavaScript sets transform: translate(...) scale(...). */
+.deck-stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    transform-origin: 0 0;
+    background: var(--slide-bg, #fff);
+}
+
+/* 4. Slides stack inside the fixed stage.
+   Content must be laid out at 1920×1080, not reflowed per device. */
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--slide-bg, #fff);
+}
+
+.slide.active,
+.slide.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* 5. Keep media inside authored slide bounds */
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 6. Presentation chrome stays outside the slide design system */
+.deck-controls {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* 7. Print one fixed-size slide per page */
+@media print {
+    html,
+    body {
+        width: 1920px;
+        height: auto;
+        overflow: visible;
+        background: #fff;
+    }
+
+    .deck-viewport {
+        position: static;
+        overflow: visible;
+        background: #fff;
+    }
+
+    .deck-stage {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none !important;
+        background: none;
+    }
+
+    .slide {
+        position: relative;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 1920px;
+        height: 1080px;
+        break-after: page;
+        page-break-after: always;
+    }
+
+    .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    .deck-controls {
+        display: none !important;
+    }
+}
+
+/* 8. Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+    }
+}
+
+:root{--stage-bg:#181c1b;--slide-bg:#edf0eb;--ink:#183c30;--accent:#eb533f;--muted:#52695e;--line:#b7c3bc;--yellow:#f7cb46}
+*{box-sizing:border-box}body{font-family:'IBM Plex Mono','Noto Sans TC',sans-serif;color:var(--ink);letter-spacing:0}button,input{font:inherit}button{cursor:pointer}button:focus-visible{outline:4px solid var(--accent);outline-offset:5px}button:disabled{opacity:.35;cursor:default}h1,h2,h3,p{margin:0}button{color:inherit}svg.icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.slide{padding:64px 84px;background-image:repeating-linear-gradient(0deg,transparent,transparent 53px,#183c3009 54px)}.slide header{display:flex;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:25px;font-size:27px}.slide footer{position:absolute;bottom:58px;left:84px;right:84px;border-top:2px solid var(--ink);padding-top:24px;display:flex;justify-content:space-between;font-size:25px}.body{display:grid;grid-template-columns:1110px 530px;gap:80px;margin-top:92px}.eyebrow{font-size:30px;margin:0 0 34px}.eyebrow span,.accent{color:var(--accent)}h1{font-size:132px;line-height:1.27;font-weight:900;margin:0 0 45px}.sub{font-size:33px;line-height:1.8;color:var(--muted)}.ticket{background:#fff;transform:rotate(4deg);padding:42px 38px;border-top:12px solid var(--ink);box-shadow:12px 15px 0 #183c3010;height:644px;position:relative}.ticket:after{content:'';position:absolute;height:16px;bottom:-16px;left:0;right:0;background:linear-gradient(135deg,#fff 25%,transparent 25%) -8px 0/16px 16px,linear-gradient(225deg,#fff 25%,transparent 25%) -8px 0/16px 16px}.ticket h2{font-size:38px;text-align:center;margin:8px 0 32px}.row{font-size:24px;display:flex;justify-content:space-between;padding:20px 0;border-bottom:2px dashed var(--line)}.total{text-align:center;padding:36px 0 24px}.total small{font-size:24px}.total strong{display:block;font-size:70px;color:var(--accent);margin-top:10px}.barcode{height:54px;background:repeating-linear-gradient(90deg,#183c30 0 3px,transparent 3px 7px,#183c30 7px 9px,transparent 9px 13px,#183c30 13px 20px,transparent 20px 25px);margin:20px 28px}.stamp{display:inline-block;background:var(--yellow);border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:10px 27px;transform:rotate(-12deg);font-size:48px;font-weight:900;line-height:1.2}.ticket .stamp{position:absolute;right:-22px;top:107px}.active .ticket{animation:print-in .7s both}.active .stamp{animation:stamp-in .6s .35s both}@keyframes print-in{from{opacity:0;translate:0 -35px}to{opacity:1;translate:0 0}}@keyframes stamp-in{from{opacity:0;scale:1.5}to{opacity:1;scale:1}}
+.section-head{margin-top:42px;display:flex;justify-content:space-between;align-items:baseline}.section-head h2{font-size:74px;font-weight:900;line-height:1.3}.section-head p{font-size:26px;color:var(--muted)}.content{margin-top:48px}.kicker{font-size:27px;color:var(--muted);margin-bottom:20px}.big-number{font-size:180px;font-weight:600;line-height:1.1}.statement{font-size:48px;font-weight:700;line-height:1.6}.small{font-size:24px;line-height:1.7;color:var(--muted)}.step{visibility:hidden;opacity:0;transform:translateY(18px);transition:opacity .35s,transform .35s}.step.shown{visibility:visible;opacity:1;transform:none}.initial.gone{visibility:hidden;opacity:0}.active .entrance{animation:print-in .55s both}.notes-source{display:none}.icon-button{border:1px solid var(--line);background:#fff;display:inline-flex;justify-content:center;align-items:center;width:42px;height:42px;border-radius:4px}.stage-button{height:56px;min-width:56px;font-size:26px;padding:0 16px;gap:12px}.stage-button svg{width:28px;height:28px}
+.deck-controls{display:flex;align-items:center;gap:5px;background:#edf0ebf5;border:1px solid #b7c3bc;padding:5px;border-radius:6px;opacity:0;transition:opacity .2s}.deck-controls:hover,.deck-controls:focus-within,.deck-controls.show{opacity:1}.counter{font-size:13px;min-width:58px;text-align:center}.edit-hotzone{position:fixed;top:0;left:0;width:70px;height:70px;z-index:1001}.edit-toggle{position:fixed;top:12px;left:12px;z-index:1002;opacity:0;pointer-events:none}.edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto}.edit-toggle.active{background:var(--yellow)}[contenteditable=true]{outline:2px dashed var(--accent);outline-offset:5px}.utility{position:fixed;z-index:2000;inset:10% max(16px,calc((100vw - 840px)/2));background:#fff;color:var(--ink);padding:30px;border:2px solid var(--ink);border-radius:6px;overflow:auto;box-shadow:0 16px 80px #0005}.utility[hidden]{display:none}.utility h2{font-size:24px;margin:0 55px 20px 0}.utility p{font-size:17px;line-height:1.8;white-space:pre-line}.utility .close{position:absolute;right:12px;top:12px}.notice{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;z-index:3000;font-size:14px}.notice:empty{display:none}
+@media print{@page{size:1920px 1080px;margin:0}.edit-hotzone,.edit-toggle,.utility,.notice,.stage-button{display:none!important}.step{visibility:visible!important;opacity:1!important;transform:none!important}.initial{visibility:hidden!important}.slide{print-color-adjust:exact;-webkit-print-color-adjust:exact}.stamp,.ticket{animation:none!important}}
+.ticket{height:672px}.ticket .stamp{top:-38px;right:22px}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:52px;margin-top:70px}.score-item{border-top:5px solid var(--ink);padding-top:26px;position:relative;min-height:355px}.score-item h3{font-size:36px;font-weight:500}.score-item .big-number{margin-top:25px}.score-item .unit{font-size:34px;margin-left:12px}.score-item .small{margin-top:20px}.score-item .minus{font-size:100px;color:var(--accent)}.score-label{position:relative;height:52px}.score-label .step{position:absolute;inset:0}.time-strip{display:flex;height:32px;width:100%;margin:38px 0 24px;gap:6px}.time-strip span:nth-child(1){flex:11;background:var(--ink)}.time-strip span:nth-child(2){flex:6;background:#91aaa0}.time-strip span:nth-child(3){flex:4;background:var(--accent)}.time-strip span:nth-child(4){flex:3;background:var(--yellow)}.score-bottom{display:flex;justify-content:space-between;align-items:center;font-size:28px}.score-bottom strong{font-size:37px}.work-grid{display:grid;grid-template-columns:1080px 560px;gap:100px}.company{font-size:128px;font-weight:600;line-height:1.1;margin-bottom:22px}.role{font-size:40px;line-height:1.7}.work-summary{font-size:55px;font-weight:700;line-height:1.6;margin-top:54px}.work-meta{display:flex;gap:45px;margin-top:42px;border-top:2px solid var(--line);padding-top:22px;font-size:27px}.work-ticket{height:584px;transform:rotate(2deg)}.work-ticket .tenure{font-size:94px;font-weight:600;margin:35px 0 12px;text-align:center}.work-ticket .tenure span{font-size:35px}.work-ticket .small{text-align:center}.error-code{background:var(--ink);color:#fff;padding:25px;margin-top:35px;font-size:30px;line-height:1.7}.footer-actions{display:flex;align-items:center;gap:25px}.compare{display:grid;grid-template-columns:550px 1fr;gap:100px;position:relative}.compare h3{font-size:31px;margin-bottom:28px}.org-chain{border-left:3px solid var(--line);padding-left:35px;margin-left:10px;display:grid;gap:22px}.org-chain span{font-size:32px}.org-chain strong{font-size:43px}.responsibility{display:grid;grid-template-columns:120px 1fr;gap:30px;border-top:2px solid var(--line);padding:26px 0;font-size:30px;line-height:1.55}.responsibility strong{color:var(--accent);font-size:32px}.compare-wrap{position:relative;height:526px}.dragon-reveal{position:absolute;inset:0;display:grid;grid-template-columns:1fr 650px;align-items:center;background:var(--slide-bg)}.dragon-reveal h3{font-size:114px;line-height:1.4}.dragon-reveal p{font-size:33px;margin-top:30px}.dragon-reveal canvas{width:650px;height:470px}.dragon-reveal.shown canvas{animation:dragon-in .9s cubic-bezier(.16,1,.3,1) both}@keyframes dragon-in{from{opacity:0;transform:translateX(650px) rotate(20deg)}to{opacity:1;transform:none}}.career-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:30px;border-top:2px solid var(--ink);font-size:30px;line-height:1.7}.career-bottom strong{font-size:36px}.relationship{display:grid;grid-template-columns:580px 1fr;gap:95px}.relationship-mark{border-right:2px solid var(--line);padding-right:60px}.relationship-mark .forever{font-size:245px;line-height:1.1;color:var(--accent)}.relationship-mark h3{font-size:68px;margin-top:18px}.relationship-mark p{font-size:29px;line-height:1.8;margin-top:22px}.principle{display:grid;grid-template-columns:66px 1fr;gap:22px;border-bottom:2px solid var(--line);padding:21px 0 35px;margin-bottom:18px}.principle .index{font-size:30px;color:var(--accent);padding-top:8px}.principle h3{font-size:42px;margin-bottom:14px}.principle p{font-size:28px;line-height:1.7}.finance{display:grid;grid-template-columns:1020px 620px;gap:100px}.finance-left{position:relative;min-height:550px}.quiz{position:absolute;inset:0}.quiz .amount{font-size:120px;font-weight:600;margin:16px 0}.quiz .amount small{font-size:45px}.quiz .question{font-size:85px;margin-top:48px;line-height:1.5}.answer{position:relative}.answer strong{font-size:123px;font-weight:600}.answer strong small{font-size:45px}.answer p{font-size:28px}.chart{display:block;width:1000px;height:268px;margin-top:12px}.legend{display:flex;gap:35px;font-size:24px}.legend span:before{content:'';display:inline-block;width:15px;height:15px;background:var(--ink);margin-right:10px}.legend span+span:before{background:var(--accent)}.milestones{display:grid;gap:20px}.milestone{border-left:4px solid var(--line);padding-left:24px}.milestone.current{border-color:var(--accent)}.milestone h3{font-size:33px}.milestone p{font-size:26px;margin-top:7px;color:var(--muted)}.goal{border-top:2px solid var(--ink);margin-top:28px;padding-top:23px}.goal .goal-line{display:flex;align-items:center;justify-content:space-between;font-size:27px}.goal strong{font-size:60px;color:var(--accent)}.progress-track{height:18px;background:#d5ddd6;margin:20px 0}.progress-track span{display:block;width:20%;height:100%;background:var(--accent)}.finance-note{font-size:22px;color:var(--muted);line-height:1.65;margin-top:25px}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:65px}.review-item{border-top:4px solid var(--ink);padding-top:25px}.review-item .number{font-size:126px;color:var(--accent);font-weight:600;line-height:1.3}.review-item .number small{font-size:40px}.review-item h3{font-size:38px;margin:12px 0}.review-item p{font-size:27px;line-height:1.8;color:var(--muted)}.closing{border-top:2px solid var(--ink);margin-top:52px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:60px}.closing h3{font-size:53px;line-height:1.6}.closing .stamp{font-size:35px;white-space:nowrap;background:#fff}.closing p{font-size:29px;line-height:1.7;margin-top:10px}.utility table{border-collapse:collapse;width:100%;font-size:18px;margin:20px 0}.utility td,.utility th{text-align:left;padding:15px 8px;border-bottom:1px solid var(--line)}.utility input{width:150px;max-width:100%;border:1px solid var(--line);padding:8px;font-size:18px}.utility .disclaimer{font-size:14px;color:var(--muted)}.dialog-action{border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:4px;padding:10px 18px;font-size:16px}.dialog-status{font-size:14px!important;min-height:26px;color:var(--muted)}
+.slide:not(.active):not(.visible) .step{visibility:hidden}
+.big-number{line-height:1.3}.company{font-size:112px;line-height:1.3}.role{font-size:36px;line-height:1.6}.work-summary{font-size:48px;margin-top:38px}.work-meta{margin-top:30px}
+.ticket .total{padding:28px 0 16px}.ticket .barcode{height:40px;margin:12px 28px}.work-ticket{height:630px}.work-ticket h2{margin:0 0 22px}.work-ticket .tenure{font-size:86px;line-height:1.2;margin:24px 0 8px}.work-ticket .error-code{font-size:27px;padding:20px;margin-top:25px}
+.closing>div{min-width:0}.closing p{font-size:26px}.closing .stamp{flex-shrink:0;margin-right:30px}
+.closing .stamp s{display:block;font-size:22px;font-weight:400;line-height:1.5;color:var(--muted);text-decoration-color:var(--accent);text-decoration-thickness:3px;margin-bottom:12px}
+.closing .stamp strong{display:block;font-size:35px;line-height:1.2;font-weight:900}
+.closing{margin-top:24px;padding-top:18px}.closing>div{flex:1}.finance-left{min-height:545px}.answer .kicker{font-size:24px;line-height:1.4;margin-bottom:4px}.answer strong{display:block;font-size:110px;line-height:1.15}.answer>p:not(.kicker){font-size:26px;line-height:1.5}.chart{height:200px;margin-top:8px}.legend{font-size:22px;line-height:1.5}.finance-note{margin-top:18px;line-height:1.5}
+.content.finance{margin-top:24px}
+.quiz{display:flex;flex-direction:column;justify-content:center;gap:42px}
+.quiz .finance-intro{font-size:52px;font-weight:700;line-height:1.5}
+.quiz .finance-formula{font-size:32px;line-height:1.8;white-space:nowrap;color:var(--accent)}
+.finance-formula sup{font-size:.65em}
+.employment-seal{width:510px;height:510px;align-self:center;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;border:12px solid var(--accent);border-radius:50%;color:var(--accent);transform:rotate(-12deg);margin-top:42px}
+.employment-seal::before{content:'';position:absolute;inset:15px;border:3px solid currentColor;border-radius:50%;pointer-events:none}
+.employment-seal .seal-top,.employment-seal .seal-bottom{font-size:27px;font-weight:700;line-height:1.5}
+.employment-seal strong{font-family:'Noto Sans TC',sans-serif;font-size:84px;font-weight:900;line-height:1.2;padding:18px 12px;border-top:4px solid currentColor;border-bottom:4px solid currentColor;white-space:nowrap}
+.active .employment-seal{animation:stamp-in .6s .25s both}
+.relationship-mark{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.relationship-mark h3{margin-top:0}
+.relationship-notes-title{font-size:30px;font-weight:500;line-height:1.5;color:var(--muted);margin-bottom:10px}
+.relationship-notes .principle{padding-top:15px;padding-bottom:25px}
+.salary-button{display:flex;align-items:center;justify-content:center;gap:18px;width:100%;height:100px;margin-top:40px;border:2px solid var(--ink);border-radius:4px;background:var(--ink);color:#fff;font-size:32px;font-weight:700;transition:background .2s}
+.salary-button:hover{background:var(--muted)}.salary-button svg.icon{width:34px;height:34px}
+:root{--text-blue:#245b91;--text-teal:#00695c;--text-berry:#ad2450;--text-gold:#876314}
+.slide[data-title="年度人生發展成果報告"] .eyebrow{color:var(--text-blue)}
+.score-item:nth-child(1),.review-item:nth-child(1){--item-color:var(--text-blue)}
+.score-item:nth-child(2),.review-item:nth-child(2){--item-color:var(--text-teal)}
+.score-item:nth-child(3),.review-item:nth-child(3){--item-color:var(--text-berry)}
+.score-item h3,.score-item .big-number,.review-item .number,.review-item h3{color:var(--item-color)}
+.time-strip span:nth-child(1){background:var(--text-blue)}.time-strip span:nth-child(2){background:var(--text-teal)}.time-strip span:nth-child(3){background:var(--text-berry)}
+.work-grid .company,.work-grid .role,.slide[aria-label="工作介紹"] .section-head h2,.slide[aria-label="職涯進度"] .section-head h2{color:var(--text-blue)}
+.work-ticket .tenure,.org-chain strong{color:var(--text-teal)}
+.responsibility:nth-of-type(1) strong{color:var(--text-blue)}.responsibility:nth-of-type(2) strong{color:var(--text-teal)}.responsibility:nth-of-type(3) strong{color:var(--text-berry)}
+.slide[aria-label="感情發展"] .section-head h2,.relationship-mark h3{color:var(--text-berry)}
+.principle:nth-of-type(1){--item-color:var(--text-berry)}.principle:nth-of-type(2){--item-color:var(--text-blue)}.principle:nth-of-type(3){--item-color:var(--text-teal)}
+.principle h3,.principle .index{color:var(--item-color)}
+.slide[aria-label="退休計畫"] .section-head h2,.quiz .finance-intro{color:var(--text-teal)}
+.milestone:nth-child(1) h3{color:var(--text-blue)}.milestone:nth-child(2) h3{color:var(--text-teal)}.milestone:nth-child(3) h3{color:var(--text-gold)}
+.closing h3{color:var(--text-blue)}.closing .stamp strong{color:var(--text-teal)}
+@media print{.compare.initial{visibility:hidden!important}.dragon-reveal{position:relative!important}.quiz{display:none!important}}
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs>
+<symbol id="arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M5 12h14"/></symbol>
+<symbol id="arrow-right" viewBox="0 0 24 24"><path d="m12 5 7 7-7 7M5 12h14"/></symbol>
+<symbol id="pencil" viewBox="0 0 24 24"><path d="m16 3 5 5M4 16 16 4a2.8 2.8 0 0 1 4 4L8 20l-5 1 1-5Z"/></symbol>
+<symbol id="download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+<symbol id="expand" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/></symbol>
+<symbol id="notes" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8ZM14 2v6h6M8 13h8M8 17h6"/></symbol>
+<symbol id="close" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+<symbol id="wallet" viewBox="0 0 24 24"><path d="M20 8V5a2 2 0 0 0-2-2H6a3 3 0 0 0 0 6h14v12H6a3 3 0 0 1-3-3V6M20 12h-4v5h4"/></symbol>
+</defs></svg>
+<div class="deck-viewport"><main class="deck-stage" id="deckStage" aria-label="年度人生發展成果報告">
+<section class="slide active visible" aria-label="封面" data-title="年度人生發展成果報告">
+<header><span>人生發展部 / 年度結算</span><span>Willie Chen</span></header>
+<div class="body"><div><p class="eyebrow">ANNUAL REPORT <span>2025</span></p><h1 data-edit="cover-title">年度人生<br>發展成果報告</h1><p class="sub" data-edit="cover-sub">這一年，確實有往前走<br>只是現在，還沒下班</p></div><aside class="employment-seal" aria-label="年度狀態認證：持續運營，on the track"><span class="seal-top">2025年度狀態認證</span><strong data-edit="cover-seal-status">持續運營</strong><span class="seal-bottom">STILL ON TRACK</span></aside></div>
+<footer><span data-edit="cover-footer">看似客觀的數據，非常主觀的人生</span><span>01 / 07</span></footer>
+<aside class="notes-source">慢慢走上台，停頓兩秒，輕嘆一口氣。
+大家好，我是 Willie Chen。這是我上班用的名字，因為我現在還在上班。
+今年的人生有沒有進步，等一下再說；至少人有到場。接下來 10 分鐘，我會用一些看似客觀的數據，做一份非常主觀的年度報告。
+如果我看起來沒什麼精神，不是對人生失去熱情，是還沒下班。</aside>
+</section>
+<section class="slide" aria-label="年度總結" data-title="今年的人生評分">
+<header><span>01 / 年度總結</span><span>生活資源分配表</span></header>
+<div class="section-head"><h2 data-edit="score-title">今年的人生評分</h2><p>ANNUAL SCORECARD</p></div>
+<div class="score-grid">
+<article class="score-item"><div class="score-label"><h3 class="initial" data-until="1">工作投入度</h3><h3 class="step" data-step="1">工作時間</h3></div><p class="big-number">11<span class="unit step" data-step="1">小時</span></p><p class="small step" data-step="1">不是拿了 11 分，是花了 11 小時</p></article>
+<article class="score-item"><div class="score-label"><h3 class="initial" data-until="1">睡眠品質</h3><h3 class="step" data-step="1">睡眠時間</h3></div><p class="big-number">6<span class="unit step" data-step="1">小時</span></p><p class="small step" data-step="1">身體下班了，腦袋不一定</p></article>
+<article class="score-item"><div class="score-label"><h3 class="initial" data-until="1">休閒娛樂</h3><h3 class="step" data-step="1">休閒時間</h3></div><p class="big-number">4<span class="minus">−1</span></p><p class="small step" data-step="1">4 小時裡，有 1 小時在晚餐後碳暈</p></article>
+</div>
+<div class="step" data-step="1"><div class="time-strip" role="img" aria-label="24 小時分配：工作 11、睡眠 6、休閒 4、其他生活 3 小時"><span></span><span></span><span></span><span></span></div><div class="score-bottom"><strong>不是分數，是時數</strong><span>其餘生活 3 小時 / 合計 24 小時</span></div></div>
+<footer><span class="step" data-step="1" data-edit="score-footer">不是表現超出滿分，是工時超出想像</span><span>02 / 07</span></footer>
+<aside class="notes-source">先讓觀眾以為滿分是 10 分，停頓，等大家對 11 和 4-1 產生疑問。
+按下一步揭曉：「你可能想問，滿分到底是幾分？其實這不是評分，是我一天的時間分配。」
+工作 11 小時、睡眠 6 小時、休閒 4 小時，剩下 3 小時是其他生活時間。碳暈的 1 小時已經算在休閒 4 小時內，不要重複扣除。
+既然工作佔了最多時間，接下來就說明一下，這 11 小時到底花在哪裡。</aside>
+</section>
+<section class="slide" aria-label="工作介紹" data-title="關於我上班這件事">
+<header><span>02 / 工作發展</span><span>任職資料與營運內容</span></header>
+<div class="section-head"><h2 data-edit="work-title">關於我上班這件事</h2><p>EMPLOYMENT RECORD</p></div>
+<div class="content work-grid"><div><p class="company" data-edit="company">Garmin</p><p class="role" data-edit="role">製程整合部 · Process Integration<br>軟體工程師</p><p class="work-summary" data-edit="work-summary">讓產線少一點卡關<br>讓自己少一點被找的機會</p><div class="work-meta"><span>產線軟體開發</span><span>流程整合</span><span>問題排除</span></div></div>
+<aside class="ticket work-ticket"><h2>在職證明</h2><div class="row"><span>姓名</span><span>Willie Chen</span></div><p class="tenure" data-edit="tenure">3<span> 年又 </span>5<span> 天</span></p><p class="small">年資持續累計中</p><button class="salary-button" data-panel="salaryPanel" aria-haspopup="dialog" aria-controls="salaryPanel"><svg class="icon" aria-hidden="true"><use href="#wallet"/></svg><span>薪資資訊</span></button></aside></div>
+<footer><span>名義上是製程整合，推理不出來的部分叫通靈</span><span>03 / 07</span></footer>
+<aside class="notes-source">公司 Garmin，製程整合部，軟體工程師二，目前年資 3 年又 5 天。上台前記得核對年資。
+開發產線使用的軟體，讓生產流程順利運作。
+諧音梗：「你董志成嗎？」停頓一下，「沒關係，我也不是。」說完直接回到正題。
+可選彩蛋：點在職證明上的「薪資資訊」按鈕揭露薪資換算。iPhone 機型與價格為未查證的幽默示意，並非官方售價，不提供精確薪資對應。
+以上資訊講了跟沒講一樣，但至少大家知道我不是用 Nokia 計薪。時間不足就略過。</aside>
+</section>
+<section class="slide" aria-label="職涯進度" data-title="組織變扁，職責變寬">
+<header><span>03 / 職涯進度</span><span>工作範圍異動紀錄</span></header>
+<div class="section-head"><h2 data-edit="career-title">組織上的小變化</h2><p>SCOPE OF WORK</p></div>
+<div class="content compare-wrap"><div class="compare"><div><h3>原本 / 分工明確</h3><div class="org-chain"><span>部門經理</span><span>課長</span><span>Leader</span><strong>Member / 我</strong></div><p class="small" style="margin-top:25px">PM 協調需求，再交給團隊開發。</p></div><div><h3>職稱沒變，服務範圍持續擴張</h3><div class="responsibility"><strong>對下</strong><span>分配工作、追蹤進度</span></div><div class="responsibility"><strong>對上</strong><span>交付成果、解釋問題</span></div><div class="responsibility"><strong>對外</strong><span>從「想要」到「做得出來」</span></div></div></div></div>
+<footer><span data-edit="career-footer">程式可以 debug，溝通沒有錯誤訊息可以查。</span><span>04 / 07</span></footer>
+<aside class="notes-source">今年工作最大的變化，是組織有一點小調整。小到組織圖少了幾個節點，我的待辦事項多了好幾排。
+去年 Leader 忙不過來，開始分擔帶人的工作，協助管理兩位 Member。後來課長離職，部分 PM 協調需求的工作也落到自己身上。
+職稱還是軟體工程師，工作內容逐漸轉型成文件工程師。
+當初選擇當軟體工程師，是覺得電腦比較講道理。後來才發現，程式可以 debug，溝通沒有錯誤訊息可以查。
+下一步是釐清想累積的技術能力，以及願意承擔的管理職責，不把什麼都接當成唯一成長方式。
+雖然有點心累，但目前還在 Garmin。有員購需求可以找我，至少這件事的需求很明確。</aside>
+</section>
+<section class="slide" aria-label="感情發展" data-title="在一起，不一定要講道理">
+<header><span>04 / 感情發展</span><span>長期關係維護紀錄</span></header>
+<div class="section-head"><h2 data-edit="relationship-title">在一起，不一定要講道理</h2><p>STILL TOGETHER</p></div>
+<div class="content relationship"><div class="relationship-mark"><h3 data-edit="relationship-status">始終如一</h3><p data-edit="relationship-sub">「沒有變化」就是好消息</p></div><div class="relationship-notes"><h3 class="relationship-notes-title" data-edit="relationship-notes-title">感情經營筆記</h3><article class="principle"><span class="index">01</span><div><h3 data-edit="principle-1">少一點改造，多一點協調</h3><p>調整期待，放下不必要的界線</p></div></article><article class="principle"><span class="index">02</span><div><h3 data-edit="principle-2">保留各自的世界</h3><p>不同的興趣，也能帶來不同的故事</p></div></article><article class="principle"><span class="index">03</span><div><h3 data-edit="principle-3">珍惜相遇，也珍惜自己</h3><p>有伴好好經營，單身享受自由</p></div></article></div></div>
+<footer><span>個人心得，非通用操作手冊</span><span>05 / 07</span></footer>
+<aside class="notes-source">講完工作的溝通，接下來談生活的溝通。這一頁不追求誰比較有道理，追求的是兩個人都過得好。
+感情狀態沒有異動，仍然是同一位對象。這裡的沒有變化，是好消息。
+改變別人很難，先調整自己的期待；放下不必要的堅持，但保留重要的界線。
+不必事事一起才算好好相處。保留各自的興趣與生活，反而能帶著不同的故事回來聊天。
+有伴時，在彼此尊重的前提下好好經營；還沒遇到時，也別忘了享受自由的空氣。
+以上是個人使用心得，不是通用操作手冊。有幫助就參考，沒幫助就當這頁沒出現過，請勿自行對號入座。</aside>
+</section>
+<section class="slide" aria-label="退休計畫" data-title="把不想上班，變成可追蹤的計畫">
+<header><span>05 / 人生進展</span><span>退休準備與資產累積</span></header>
+<div class="section-head"><h2 data-edit="finance-title">把「不想上班」變成計畫</h2><p>FUTURE FREEDOM</p></div>
+<div class="content finance"><div class="finance-left"><div class="quiz initial" data-until="1"><p class="finance-intro" data-edit="finance-intro">理財是數學，不是玄學</p><p class="finance-formula">10,000 x [(1 + 5%/12)<sup>360</sup> - 1] ÷ (5%/12) = ?</p></div><div class="answer step" data-step="1"><p class="kicker">30 年後 / 試算期末資產</p><strong class="accent">832.26<small> 萬</small></strong><p>投入本金 360 萬 + 累積收益約 472 萬</p><canvas class="chart" id="growthChart" width="1000" height="268" role="img" aria-label="30 年資產累積圖：本金 360 萬元，試算期末資產 832.26 萬元"></canvas><div class="legend"><span>投入本金</span><span>試算總資產</span></div></div></div>
+<div><div class="milestones"><div class="milestone current"><h3>01 工作 / 累積本金</h3><p>先替未來的自己存一點選擇權</p></div><div class="milestone"><h3>02 半退休 / 選擇節奏</h3><p>仍然工作，但不只追求高薪</p></div><div class="milestone"><h3>03 退休 / 資產支應生活</h3><p>預留通膨、市場與長壽風險</p></div></div><div class="goal step" data-step="1"><div class="goal-line"><span>進度</span><strong>20%</strong></div><div class="progress-track" role="progressbar" aria-label="半退休配息目標進度" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span></span></div><div class="goal-line"><span>階段性目標每月 5 萬元</span><button class="icon-button stage-button" data-panel="dividendPanel" title="配息進度" aria-label="配息進度"><svg class="icon"><use href="#notes"/></svg></button></div></div></div></div>
+<p class="finance-note step" data-step="1">先為生活留足餘裕，再讓資金為未來累積</p>
+<footer><span class="step" data-step="1" data-edit="finance-footer">剩下五分之四，明天還是要打卡</span><span>06 / 07</span></footer>
+<aside class="notes-source">感情希望長久，工作倒不一定。接下來談一個需要長期經營的計畫：退休。
+理財是數學，不是許願。畫面先只呈現引言與公式，口頭補充：每月底投入 1 萬元，持續 30 年，年利率 5% 按月複利，會累積多少？請觀眾猜，再按下一步揭曉。
+累計投入 360 萬，期末資產約 832.26 萬。算式：10,000 x ((1 + 0.05 / 12)^360 - 1) / (0.05 / 12)。這是月報酬率固定為 5%/12 的假設，不是實際績效保證。
+目前在工作階段。半退休不是不工作，而是不必只為高薪選擇工作；退休則需要資產足以支應生活，且預留風險緩衝。
+配息追蹤目標為平均每月 5 萬、全年 60 萬，目前進度 20%。這是個人配息目標，和左側試算是兩件事。
+可選：點配息進度按鈕，看 10 月 0056、11 月 00878、12 月 00919 的追蹤表。實際時程以公告為準，金額待確認；可輸入實際數字並儲存在本機。
+不是明天就不工作，而是逐步累積可以選擇怎麼工作的餘裕。</aside>
+</section>
+<section class="slide" aria-label="年度回顧" data-title="往前走，要把生活帶上，科技也不能落後">
+<header><span>06 / 年度回顧</span><span>成果結算與下一年度方向</span></header>
+<div class="section-head"><h2 data-edit="review-title">今年的成果不算驚天動地，但至少還在前進</h2><p>YEAR-END BALANCE</p></div>
+<div class="content review-grid"><article class="review-item"><p class="number">在職</p><h3 data-edit="review-work">工作，扛住了</h3><p>試圖找到工作與生活的平衡</p></article><article class="review-item"><p class="number">700<small> 天</small></p><h3 data-edit="review-study">Speak學習，沒中斷</h3><p>除了打卡，也持續為自己做一件事</p></article><article class="review-item"><p class="number">已辦妥</p><h3 data-edit="review-passport">護照，準備好了</h3><p>旅行還沒成行，<br>但不再只停留在「有空再說」</p></article></div>
+<div class="closing"><div><h3 data-edit="closing-title">往前走，要把生活帶上，科技也不能落後</h3></div><span class="stamp"><s>Work-Life Balance</s><strong>Less Work.<br>More Life.</strong></span></div>
+<footer><span data-edit="last-line">謝謝大家。希望下次報告的時候，我已經下班了</span><span>07 / 07</span></footer>
+<aside class="notes-source">今年三件值得肯定的事：持續任職，也接下更多責任；Speak 連續學習累積 700 天；把護照辦好。
+幽默版：目前仍在職，尚未把退休計畫誤按成離職申請。
+尚未完成的課題，是找回 WLB。Less Work. More Life. 少一點被工作佔滿，多一點留給自己的生活。
+不必每件事都走在最前面，但要持續前進，也別把自己的生活落在後面。
+今年沒有什麼驚天動地的成就，但有把工作扛住、把感情顧好，也持續學習、開始替未來做打算。明年不一定要做更多，但希望留給自己的時間，能比今年多一點。
+以上是我的年度人生發展成果報告。謝謝大家，希望下次報告的時候，我已經下班了。</aside>
+</section>
+</main></div>
+<nav class="deck-controls show" aria-label="簡報控制">
+<button class="icon-button" id="previous" title="上一步（←）" aria-label="上一步"><svg class="icon"><use href="#arrow-left"/></svg></button>
+<output class="counter" id="counter" aria-live="polite">1 / 7</output>
+<button class="icon-button" id="next" title="下一步（→／空白鍵）" aria-label="下一步"><svg class="icon"><use href="#arrow-right"/></svg></button>
+<button class="icon-button" id="notesButton" title="講者備註（N）" aria-label="講者備註"><svg class="icon"><use href="#notes"/></svg></button>
+<button class="icon-button" id="fullscreen" title="全螢幕（F）" aria-label="全螢幕"><svg class="icon"><use href="#expand"/></svg></button>
+</nav>
+<div class="edit-hotzone" aria-hidden="true"></div><button class="icon-button edit-toggle" id="editToggle" title="編輯文字（E）" aria-label="編輯文字" aria-pressed="false"><svg class="icon"><use href="#pencil"/></svg></button>
+<section class="utility" id="notesPanel" role="dialog" aria-modal="true" aria-labelledby="notesTitle" hidden><button class="icon-button close" data-close title="關閉" aria-label="關閉"><svg class="icon"><use href="#close"/></svg></button><h2 id="notesTitle"></h2><p id="notesText"></p></section>
+<section class="utility" id="salaryPanel" role="dialog" aria-modal="true" aria-labelledby="salaryTitle" hidden><button class="icon-button close" data-close title="關閉" aria-label="關閉"><svg class="icon"><use href="#close"/></svg></button><h2 id="salaryTitle">月薪換算單位：iPhone 18/月</h2><table><thead><tr><th>對照級距</th><th>價格區間</th></tr></thead><tbody><tr><td>iPhone 18 Pro</td><td>44K-88K</td></tr><tr><td>iPhone 18 Pro Max</td><td>49K-93K</td></tr><tr><td>iPhone 18 Duo</td><td>74K-118K</td></tr></tbody></table><br>至少不是用 Nokia 計薪。</p></section>
+<section class="utility" id="dividendPanel" role="dialog" aria-modal="true" aria-labelledby="dividendTitle" hidden><button class="icon-button close" data-close title="關閉" aria-label="關閉"><svg class="icon"><use href="#close"/></svg></button><h2 id="dividendTitle">短期配息追蹤 / 10-12 月</h2><table><thead><tr><th>月份</th><th>標的</th><th>實際配息（元）</th></tr></thead><tbody><tr><td>10 月</td><td>0056</td><td><input id="dividend-0056" aria-label="0056 實際配息" type="number" min="0" step="0.01" placeholder="待確認"></td></tr><tr><td>11 月</td><td>00878</td><td><input id="dividend-00878" aria-label="00878 實際配息" type="number" min="0" step="0.01" placeholder="待確認"></td></tr><tr><td>12 月</td><td>00919</td><td><input id="dividend-00919" aria-label="00919 實際配息" type="number" min="0" step="0.01" placeholder="待確認"></td></tr></tbody></table><button class="dialog-action" id="saveDividends">儲存紀錄</button><p class="dialog-status" id="dividendStatus" role="status"></p><p class="disclaimer">月份為預計追蹤安排，實際時程與金額以公告為準。配息不等於總報酬；此表不會自動變更年度目標的 20% 進度。紀錄僅儲存於目前瀏覽器，不會上傳。</p></section>
+<div class="notice" id="notice" role="status"></div>
+<script>
+class SlidePresentation {
+    constructor() {
+        this.stage = document.getElementById('deckStage');
+        this.slides = [...document.querySelectorAll('.slide')];
+        this.currentSlide = 0;
+        this.steps = this.slides.map(() => 0);
+        this.editing = false;
+        this.storageKey = 'willie-annual-report-2025-v1';
+        this.originalMarkup = new Map([...document.querySelectorAll('[data-edit]')].map(element => [element.dataset.edit, element.innerHTML]));
+        this.restoreEdits();
+        this.fit = () => {
+            const factor = Math.min(innerWidth / 1920, innerHeight / 1080);
+            this.stage.style.transform = `translate(${(innerWidth - 1920 * factor) / 2}px,${(innerHeight - 1080 * factor) / 2}px) scale(${factor})`;
+        };
+        addEventListener('resize', this.fit);
+        this.fit();
+        this.bindControls();
+        const requested = Number(location.hash.slice(1));
+        this.showSlide(Number.isInteger(requested) && requested > 0 ? requested - 1 : 0);
+    }
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, slideIndex) => {
+            const active = slideIndex === this.currentSlide;
+            slide.classList.toggle('active', active);
+            slide.classList.toggle('visible', active);
+            slide.inert = !active;
+            slide.setAttribute('aria-hidden', String(!active));
+        });
+        this.renderSteps();
+        document.getElementById('counter').textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+        try { history.replaceState(null, '', `#${this.currentSlide + 1}`); } catch {}
+    }
+    renderSteps() {
+        const slide = this.slides[this.currentSlide];
+        const progress = this.steps[this.currentSlide];
+        slide.querySelectorAll('[data-step]').forEach(element => {
+            const shown = Number(element.dataset.step) <= progress;
+            element.classList.toggle('shown', shown);
+            element.setAttribute('aria-hidden', String(!shown));
+        });
+        slide.querySelectorAll('[data-until]').forEach(element => {
+            const gone = progress >= Number(element.dataset.until);
+            element.classList.toggle('gone', gone);
+            element.setAttribute('aria-hidden', String(gone));
+        });
+        document.getElementById('previous').disabled = this.currentSlide === 0 && progress === 0;
+        document.getElementById('next').disabled = this.currentSlide === this.slides.length - 1 && progress >= this.maxSteps();
+    }
+    maxSteps() { return Math.max(0, ...[...this.slides[this.currentSlide].querySelectorAll('[data-step]')].map(element => Number(element.dataset.step))); }
+    next() {
+        if (this.editing || this.openPanel) return;
+        if (this.steps[this.currentSlide] < this.maxSteps()) { this.steps[this.currentSlide]++; this.renderSteps(); }
+        else this.showSlide(this.currentSlide + 1);
+    }
+    previous() {
+        if (this.editing || this.openPanel) return;
+        if (this.steps[this.currentSlide] > 0) { this.steps[this.currentSlide]--; this.renderSteps(); }
+        else this.showSlide(this.currentSlide - 1);
+    }
+    panel(id) {
+        this.focusBeforePanel = document.activeElement;
+        this.openPanel = document.getElementById(id);
+        this.openPanel.hidden = false;
+        this.stage.inert = true;
+        document.querySelector('.deck-controls').inert = true;
+        document.getElementById('editToggle').inert = true;
+        this.openPanel.querySelector('button').focus();
+    }
+    closePanel() {
+        if (!this.openPanel) return;
+        this.openPanel.hidden = true;
+        this.openPanel = null;
+        this.stage.inert = false;
+        document.querySelector('.deck-controls').inert = false;
+        document.getElementById('editToggle').inert = false;
+        this.focusBeforePanel?.focus();
+    }
+    showNotes() {
+        document.getElementById('notesTitle').textContent = `${this.currentSlide + 1}. ${this.slides[this.currentSlide].dataset.title}`;
+        document.getElementById('notesText').textContent = this.slides[this.currentSlide].querySelector('.notes-source')?.textContent || '';
+        this.panel('notesPanel');
+    }
+    toggleEditing() {
+        if (this.openPanel) return;
+        this.editing = !this.editing;
+        document.querySelectorAll('[data-edit]').forEach(element => element.setAttribute('contenteditable', String(this.editing)));
+        const toggle = document.getElementById('editToggle');
+        toggle.classList.toggle('active', this.editing);
+        toggle.setAttribute('aria-pressed', String(this.editing));
+        if (!this.editing) this.saveEdits();
+    }
+    restoreEdits() {
+        try {
+            const edits = JSON.parse(localStorage.getItem(this.storageKey) || '{}');
+            document.querySelectorAll('[data-edit]').forEach(element => {
+                if (typeof edits[element.dataset.edit] === 'string') {
+                    element.replaceChildren();
+                    edits[element.dataset.edit].split('\n').forEach((line, index) => {
+                        if (index) element.append(document.createElement('br'));
+                        element.append(document.createTextNode(line));
+                    });
+                }
+            });
+        } catch {}
+    }
+    saveEdits() {
+        const edits = {};
+        document.querySelectorAll('[data-edit]').forEach(element => {
+            if (element.innerHTML !== this.originalMarkup.get(element.dataset.edit)) edits[element.dataset.edit] = element.innerText;
+        });
+        try { localStorage.setItem(this.storageKey, JSON.stringify(edits)); }
+        catch { this.notify('瀏覽器無法儲存，請下載 HTML 保留修改。'); }
+    }
+    notify(message) {
+        const notice = document.getElementById('notice');
+        notice.textContent = message;
+        clearTimeout(this.noticeTimer);
+        this.noticeTimer = setTimeout(() => { notice.textContent = ''; }, 3500);
+    }
+    download() {
+        this.saveEdits();
+        const copy = document.documentElement.cloneNode(true);
+        copy.querySelectorAll('[contenteditable]').forEach(element => element.removeAttribute('contenteditable'));
+        copy.querySelectorAll('[inert]').forEach(element => element.removeAttribute('inert'));
+        copy.querySelectorAll('.utility').forEach(element => { element.hidden = true; });
+        copy.querySelector('#editToggle').classList.remove('active', 'show');
+        copy.querySelector('#editToggle').setAttribute('aria-pressed', 'false');
+        copy.querySelector('#notice').textContent = '';
+        const url = URL.createObjectURL(new Blob(['<!doctype html>\n', copy.outerHTML], {type:'text/html;charset=utf-8'}));
+        const link = document.createElement('a');
+        link.href = url; link.download = 'willie-annual-report-2025.html'; link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+    }
+    async fullscreen() {
+        try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); }
+        catch { this.notify('此瀏覽器不支援全螢幕，請使用瀏覽器的全螢幕功能。'); }
+    }
+    bindControls() {
+        document.getElementById('next').onclick = () => this.next();
+        document.getElementById('previous').onclick = () => this.previous();
+        document.getElementById('notesButton').onclick = () => this.showNotes();
+        document.getElementById('fullscreen').onclick = () => this.fullscreen();
+        document.getElementById('save')?.addEventListener('click', () => this.download());
+        document.getElementById('editToggle').onclick = () => this.toggleEditing();
+        document.querySelectorAll('[data-close]').forEach(button => { button.onclick = () => this.closePanel(); });
+        document.querySelectorAll('[data-panel]').forEach(button => { button.onclick = () => this.panel(button.dataset.panel); });
+        document.querySelectorAll('[data-edit]').forEach(element => {
+            element.addEventListener('input', () => this.saveEdits());
+            element.addEventListener('paste', event => {
+                event.preventDefault();
+                const selection = getSelection();
+                if (!selection.rangeCount) return;
+                const range = selection.getRangeAt(0);
+                range.deleteContents();
+                const text = document.createTextNode(event.clipboardData.getData('text/plain'));
+                range.insertNode(text); range.setStartAfter(text); range.collapse(true);
+                selection.removeAllRanges(); selection.addRange(range); this.saveEdits();
+            });
+        });
+        addEventListener('keydown', event => {
+            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.download(); return; }
+            if (event.key === 'Escape') { this.closePanel(); if (this.editing) this.toggleEditing(); return; }
+            if (this.openPanel) {
+                if (event.key === 'Tab') {
+                    const controls = [...this.openPanel.querySelectorAll('button,input,[tabindex="0"]')];
+                    if (event.shiftKey && document.activeElement === controls[0]) { event.preventDefault(); controls.at(-1).focus(); }
+                    else if (!event.shiftKey && document.activeElement === controls.at(-1)) { event.preventDefault(); controls[0].focus(); }
+                }
+                return;
+            }
+            if (event.target.isContentEditable || event.target.matches('input,textarea,select') || event.ctrlKey || event.metaKey || event.altKey) return;
+            if (event.key.toLowerCase() === 'e') { this.toggleEditing(); return; }
+            if (this.editing) return;
+            if (event.key.toLowerCase() === 'n') this.showNotes();
+            if (event.key.toLowerCase() === 'f') this.fullscreen();
+            if (event.key === ' ' && event.target.closest('button')) return;
+            if (['ArrowRight','ArrowDown','PageDown',' '].includes(event.key)) { event.preventDefault(); this.next(); }
+            if (['ArrowLeft','ArrowUp','PageUp'].includes(event.key)) { event.preventDefault(); this.previous(); }
+            if (event.key === 'Home') { event.preventDefault(); this.steps[0] = 0; this.showSlide(0); }
+            if (event.key === 'End') { event.preventDefault(); this.showSlide(this.slides.length - 1); }
+        });
+        let lastWheel = 0;
+        addEventListener('wheel', event => {
+            if (this.openPanel || this.editing || event.ctrlKey || Math.abs(event.deltaY) < 15) return;
+            event.preventDefault();
+            if (Date.now() - lastWheel < 650) return;
+            lastWheel = Date.now(); event.deltaY > 0 ? this.next() : this.previous();
+        }, {passive:false});
+        let touchStart = null;
+        this.stage.addEventListener('touchstart', event => {
+            if (event.touches.length !== 1 || event.target.closest('button,input,[contenteditable=true]')) { touchStart = null; return; }
+            touchStart = {x:event.touches[0].clientX,y:event.touches[0].clientY};
+        }, {passive:true});
+        this.stage.addEventListener('touchend', event => {
+            if (!touchStart) return;
+            const deltaX = event.changedTouches[0].clientX - touchStart.x;
+            const deltaY = event.changedTouches[0].clientY - touchStart.y;
+            if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) deltaX < 0 ? this.next() : this.previous();
+            touchStart = null;
+        });
+        const toggle = document.getElementById('editToggle');
+        const hotzone = document.querySelector('.edit-hotzone');
+        let hideTimer;
+        [toggle,hotzone].forEach(element => {
+            element.onmouseenter = () => { clearTimeout(hideTimer); toggle.classList.add('show'); };
+            element.onmouseleave = () => { hideTimer = setTimeout(() => toggle.classList.remove('show'),400); };
+        });
+        hotzone.onclick = () => this.toggleEditing();
+        let controlsTimer;
+        const controls = document.querySelector('.deck-controls');
+        const revealControls = () => { controls.classList.add('show'); clearTimeout(controlsTimer); controlsTimer = setTimeout(() => controls.classList.remove('show'),2000); };
+        addEventListener('pointermove',revealControls); addEventListener('touchstart',revealControls,{passive:true}); revealControls();
+    }
+}
+window.presentation = new SlidePresentation();
+function drawVisuals() {
+    const canvas = document.getElementById('growthChart');
+    const context = canvas.getContext('2d');
+    const origin = {x:28,y:224};
+    const width = 910;
+    const height = 190;
+    context.clearRect(0,0,canvas.width,canvas.height);
+    context.font = '22px "IBM Plex Mono", "Noto Sans TC"';
+    context.fillStyle = '#52695e';
+    [0,10,20,30].forEach(year => {
+        const position = origin.x + year / 30 * width;
+        context.strokeStyle = '#b7c3bc'; context.lineWidth = 1;
+        context.beginPath(); context.moveTo(position,25); context.lineTo(position,224); context.stroke();
+        context.fillText(`${year} 年`,position - 12,260);
+    });
+    const balance = months => 10000 * (Math.pow(1 + .05 / 12,months) - 1) / (.05 / 12);
+    const maximum = balance(360);
+    [['#183c30',months => months * 10000],['#eb533f',balance]].forEach(([color,calculate]) => {
+        context.beginPath(); context.strokeStyle = color; context.lineWidth = 5;
+        for (let month = 0;month <= 360;month++) {
+            const pointX = origin.x + month / 360 * width;
+            const pointY = origin.y - calculate(month) / maximum * height;
+            if (month === 0) context.moveTo(pointX,pointY); else context.lineTo(pointX,pointY);
+        }
+        context.stroke();
+        context.beginPath(); context.arc(origin.x + width,origin.y - calculate(360) / maximum * height,7,0,Math.PI * 2); context.fillStyle = color; context.fill();
+    });
+}
+document.fonts.ready.then(drawVisuals);
+const dividendInputs = [...document.querySelectorAll('#dividendPanel input')];
+try {
+    const records = JSON.parse(localStorage.getItem('willie-dividends-2025') || '{}');
+    dividendInputs.forEach(input => { if (typeof records[input.id] === 'string') input.value = records[input.id]; });
+} catch {}
+document.getElementById('saveDividends').onclick = () => {
+    if (dividendInputs.some(input => !input.reportValidity())) return;
+    const records = Object.fromEntries(dividendInputs.map(input => [input.id,input.value]));
+    try { localStorage.setItem('willie-dividends-2025',JSON.stringify(records)); document.getElementById('dividendStatus').textContent = '已儲存於此瀏覽器。'; }
+    catch { document.getElementById('dividendStatus').textContent = '此瀏覽器不允許本機儲存，紀錄尚未保存。'; }
+};
+</script>
+</body>
+</html>
