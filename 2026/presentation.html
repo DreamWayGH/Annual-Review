@@ -167,10 +167,6 @@
       button {
         cursor: pointer;
       }
-      button:focus-visible {
-        outline: 4px solid var(--accent);
-        outline-offset: 5px;
-      }
       button:disabled {
         opacity: 0.35;
         cursor: default;
@@ -196,12 +192,7 @@
       }
       .slide {
         padding: 64px 84px;
-        background-image: repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 53px,
-          #183c3009 54px
-        );
+        background-image: repeating-linear-gradient(0deg, transparent, transparent 53px, #183c3009 54px);
       }
       .slide header {
         display: flex;
@@ -641,6 +632,7 @@
       .role {
         font-size: 40px;
         line-height: 1.7;
+        margin-bottom: 100px;
       }
       .work-summary {
         font-size: 55px;
@@ -1380,10 +1372,7 @@
     </style>
   </head>
   <body>
-    <svg
-      style="position: absolute; width: 0; height: 0; overflow: hidden"
-      aria-hidden="true"
-    >
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" aria-hidden="true">
       <defs>
         <symbol id="arrow-left" viewBox="0 0 24 24">
           <path d="m12 19-7-7 7-7M5 12h14" />
@@ -1395,74 +1384,46 @@
           <path d="m16 3 5 5M4 16 16 4a2.8 2.8 0 0 1 4 4L8 20l-5 1 1-5Z" />
         </symbol>
         <symbol id="download" viewBox="0 0 24 24">
-          <path
-            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
-          />
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
         </symbol>
         <symbol id="expand" viewBox="0 0 24 24">
-          <path
-            d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"
-          />
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3" />
         </symbol>
         <symbol id="notes" viewBox="0 0 24 24">
-          <path
-            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8ZM14 2v6h6M8 13h8M8 17h6"
-          />
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8ZM14 2v6h6M8 13h8M8 17h6" />
         </symbol>
         <symbol id="close" viewBox="0 0 24 24">
           <path d="m18 6-12 12M6 6l12 12" />
         </symbol>
         <symbol id="wallet" viewBox="0 0 24 24">
-          <path
-            d="M20 8V5a2 2 0 0 0-2-2H6a3 3 0 0 0 0 6h14v12H6a3 3 0 0 1-3-3V6M20 12h-4v5h4"
-          />
+          <path d="M20 8V5a2 2 0 0 0-2-2H6a3 3 0 0 0 0 6h14v12H6a3 3 0 0 1-3-3V6M20 12h-4v5h4" />
         </symbol>
       </defs>
     </svg>
     <div class="deck-viewport">
       <main class="deck-stage" id="deckStage" aria-label="年度人生發展成果報告">
-        <section
-          class="slide active visible"
-          aria-label="封面"
-          data-title="年度人生發展成果報告"
-        >
-          <header>
-            <span>人生發展部 / 年度結算</span><span>Willie Chen</span>
-          </header>
+        <section class="slide active visible" aria-label="封面" data-title="年度人生發展成果報告">
+          <header><span>人生發展部 / 年度結算</span><span>Willie Chen</span></header>
           <div class="body">
             <div>
               <p class="eyebrow">ANNUAL REPORT <span>2025</span></p>
               <h1 data-edit="cover-title">年度人生<br />發展成果報告</h1>
-              <p class="sub" data-edit="cover-sub">
-                這一年，確實有往前走<br />只是現在，還沒下班
-              </p>
+              <p class="sub" data-edit="cover-sub">這一年，確實有往前走<br />只是現在，還沒下班</p>
             </div>
-            <aside
-              class="employment-seal"
-              aria-label="年度狀態認證：持續運營，on the track"
-            >
-              <span class="seal-top">2025年度狀態認證</span
-              ><strong data-edit="cover-seal-status">持續運營</strong
+            <aside class="employment-seal" aria-label="年度狀態認證：持續運營，on the track">
+              <span class="seal-top">2025年度狀態認證</span><strong data-edit="cover-seal-status">持續運營</strong
               ><span class="seal-bottom">STILL ON TRACK</span>
             </aside>
           </div>
-          <footer>
-            <span data-edit="cover-footer">看似客觀的數據，非常主觀的人生</span
-            ><span>01 / 07</span>
-          </footer>
+          <footer><span data-edit="cover-footer">看似客觀的數據，非常主觀的人生</span><span>01 / 07</span></footer>
           <aside class="notes-source">
-            慢慢走上台，停頓兩秒，輕嘆一口氣。 大家好，我是 Willie
-            Chen。這是我上班用的名字，因為我現在還在上班。
+            慢慢走上台，停頓兩秒，輕嘆一口氣。 大家好，我是 Willie Chen。這是我上班用的名字，因為我現在還在上班。
             今年的人生有沒有進步，等一下再說；至少人有到場。接下來 10
             分鐘，我會用一些看似客觀的數據，做一份非常主觀的年度報告。
             如果我看起來沒什麼精神，不是對人生失去熱情，是還沒下班。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="年度總結"
-          data-title="今年的人生評分"
-        >
+        <section class="slide" aria-label="年度總結" data-title="今年的人生評分">
           <header><span>01 / 年度總結</span><span>生活資源分配表</span></header>
           <div class="section-head">
             <h2 data-edit="score-title">今年的人生評分</h2>
@@ -1474,21 +1435,15 @@
                 <h3 class="initial" data-until="1">工作投入度</h3>
                 <h3 class="step" data-step="1">工作時間</h3>
               </div>
-              <p class="big-number">
-                11<span class="unit step" data-step="1">小時</span>
-              </p>
-              <p class="small step" data-step="1">
-                不是拿了 11 分，是花了 11 小時
-              </p>
+              <p class="big-number">11<span class="unit step" data-step="1">小時</span></p>
+              <p class="small step" data-step="1">不是拿了 11 分，是花了 11 小時</p>
             </article>
             <article class="score-item">
               <div class="score-label">
                 <h3 class="initial" data-until="1">睡眠品質</h3>
                 <h3 class="step" data-step="1">睡眠時間</h3>
               </div>
-              <p class="big-number">
-                6<span class="unit step" data-step="1">小時</span>
-              </p>
+              <p class="big-number">6<span class="unit step" data-step="1">小時</span></p>
               <p class="small step" data-step="1">身體下班了，腦袋不一定</p>
             </article>
             <article class="score-item">
@@ -1497,46 +1452,28 @@
                 <h3 class="step" data-step="1">休閒時間</h3>
               </div>
               <p class="big-number">4<span class="minus">−1</span></p>
-              <p class="small step" data-step="1">
-                4 小時裡，有 1 小時在晚餐後碳暈
-              </p>
+              <p class="small step" data-step="1">4 小時裡，有 1 小時在晚餐後碳暈</p>
             </article>
           </div>
           <div class="step" data-step="1">
-            <div
-              class="time-strip"
-              role="img"
-              aria-label="24 小時分配：工作 11、睡眠 6、休閒 4、其他生活 3 小時"
-            >
+            <div class="time-strip" role="img" aria-label="24 小時分配：工作 11、睡眠 6、休閒 4、其他生活 3 小時">
               <span></span><span></span><span></span><span></span>
             </div>
-            <div class="score-bottom">
-              <strong>不是分數，是時數</strong
-              ><span>其餘生活 3 小時 / 合計 24 小時</span>
-            </div>
+            <div class="score-bottom"><strong>不是分數，是時數</strong><span>其餘生活 3 小時 / 合計 24 小時</span></div>
           </div>
           <footer>
-            <span class="step" data-step="1" data-edit="score-footer"
-              >不是表現超出滿分，是工時超出想像</span
+            <span class="step" data-step="1" data-edit="score-footer">不是表現超出滿分，是工時超出想像</span
             ><span>02 / 07</span>
           </footer>
           <aside class="notes-source">
             先讓觀眾以為滿分是 10 分，停頓，等大家對 11 和 4-1 產生疑問。
-            按下一步揭曉：「你可能想問，滿分到底是幾分？其實這不是評分，是我一天的時間分配。」
-            工作 11 小時、睡眠 6 小時、休閒 4 小時，剩下 3
-            小時是其他生活時間。碳暈的 1 小時已經算在休閒 4
-            小時內，不要重複扣除。 既然工作佔了最多時間，接下來就說明一下，這 11
-            小時到底花在哪裡。
+            按下一步揭曉：「你可能想問，滿分到底是幾分？其實這不是評分，是我一天的時間分配。」 工作 11 小時、睡眠 6
+            小時、休閒 4 小時，剩下 3 小時是其他生活時間。碳暈的 1 小時已經算在休閒 4 小時內，不要重複扣除。
+            既然工作佔了最多時間，接下來就說明一下，這 11 小時到底花在哪裡。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="工作介紹"
-          data-title="關於我上班這件事"
-        >
-          <header>
-            <span>02 / 工作發展</span><span>任職資料與營運內容</span>
-          </header>
+        <section class="slide" aria-label="工作介紹" data-title="關於我上班這件事">
+          <header><span>02 / 工作發展</span><span>任職資料與營運內容</span></header>
           <div class="section-head">
             <h2 data-edit="work-title">關於我上班這件事</h2>
             <p>EMPLOYMENT RECORD</p>
@@ -1544,56 +1481,32 @@
           <div class="content work-grid">
             <div>
               <p class="company" data-edit="company">GARMIN</p>
-              <p class="role" data-edit="role">
-                製程整合部 · Process Integration<br />軟體工程師
-              </p>
-              <p class="work-summary" data-edit="work-summary">
-                讓產線少一點卡關<br />讓自己少一點被找的機會
-              </p>
-              <div class="work-meta">
-                <span>產線軟體開發</span><span>流程整合</span
-                ><span>問題排除</span>
-              </div>
+              <p class="role" data-edit="role">製程整合部 x 軟體工程師</p>
+              <p class="work-summary" data-edit="work-summary">讓產線少一點卡關<br />讓自己少一點被找的機會</p>
+              <div class="work-meta"><span>產線軟體開發</span><span>流程整合</span><span>問題排除</span></div>
             </div>
             <aside class="ticket work-ticket">
               <h2>在職證明</h2>
               <div class="row"><span>姓名</span><span>Willie Chen</span></div>
-              <p class="tenure" data-edit="tenure">
-                3<span> 年又 </span>5<span> 天</span>
-              </p>
+              <p class="tenure" data-edit="tenure">3<span> 年又 </span>5<span> 天</span></p>
               <p class="small">年資持續累計中</p>
-              <button
-                class="salary-button"
-                data-panel="salaryPanel"
-                aria-haspopup="dialog"
-                aria-controls="salaryPanel"
-              >
-                <svg class="icon" aria-hidden="true"><use href="#wallet" /></svg
-                ><span>薪資資訊</span>
+              <button class="salary-button" data-panel="salaryPanel" aria-haspopup="dialog" aria-controls="salaryPanel">
+                <svg class="icon" aria-hidden="true"><use href="#wallet" /></svg><span>薪資資訊</span>
               </button>
             </aside>
           </div>
-          <footer>
-            <span>職稱是工程師，隱藏職業是通靈師</span><span>03 / 07</span>
-          </footer>
+          <footer><span>職稱是工程師，隱藏職業是通靈師</span><span>03 / 07</span></footer>
           <aside class="notes-source">
-            公司 Garmin，製程整合部，軟體工程師二，目前年資 3 年又 5
-            天。上台前記得核對年資。 開發產線使用的軟體，讓生產流程順利運作。
+            公司 Garmin，製程整合部，軟體工程師二，目前年資 3 年又 5 天。上台前記得核對年資。
+            開發產線使用的軟體，讓生產流程順利運作。
             諧音梗：「你董志成嗎？」停頓一下，「沒關係，我也不是。」說完直接回到正題。
             可選彩蛋：點在職證明上的「薪資資訊」按鈕揭露薪資換算。iPhone
             機型與價格為未查證的幽默示意，並非官方售價，不提供精確薪資對應。
-            以上資訊講了跟沒講一樣，但至少大家知道我不是用 Nokia
-            計薪。時間不足就略過。
+            以上資訊講了跟沒講一樣，但至少大家知道我不是用 Nokia 計薪。時間不足就略過。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="職涯進度"
-          data-title="組織變扁，職責變寬"
-        >
-          <header>
-            <span>03 / 職涯進度</span><span>工作範圍異動紀錄</span>
-          </header>
+        <section class="slide" aria-label="職涯進度" data-title="組織變扁，職責變寬">
+          <header><span>03 / 職涯進度</span><span>工作範圍異動紀錄</span></header>
           <div class="section-head">
             <h2 data-edit="career-title">組織上的小變化</h2>
             <p>SCOPE OF WORK</p>
@@ -1603,52 +1516,32 @@
               <div>
                 <h3>原本 / 分工明確</h3>
                 <div class="org-chain">
-                  <span>部門經理</span><span>課長</span><span>Leader</span
-                  ><strong>Member / 我</strong>
+                  <span>部門經理</span><span>課長</span><span>Leader</span><strong>Member / 我</strong>
                 </div>
-                <p class="small" style="margin-top: 25px">
-                  PM 協調需求，再交給團隊開發。
-                </p>
+                <p class="small" style="margin-top: 25px">PM 協調需求，再交給團隊開發。</p>
               </div>
               <div>
                 <h3>職稱沒變，服務範圍持續擴張</h3>
-                <div class="responsibility">
-                  <strong>對下</strong><span>分配工作、追蹤進度</span>
-                </div>
-                <div class="responsibility">
-                  <strong>對上</strong><span>交付成果、解釋問題</span>
-                </div>
-                <div class="responsibility">
-                  <strong>對外</strong><span>從「想要」到「做得出來」</span>
-                </div>
+                <div class="responsibility"><strong>對下</strong><span>分配工作、追蹤進度</span></div>
+                <div class="responsibility"><strong>對上</strong><span>交付成果、解釋問題</span></div>
+                <div class="responsibility"><strong>對外</strong><span>從「想要」到「做得出來」</span></div>
               </div>
             </div>
           </div>
           <footer>
-            <span data-edit="career-footer"
-              >程式可以 debug，溝通沒有錯誤訊息可以查。</span
-            ><span>04 / 07</span>
+            <span data-edit="career-footer">程式可以 debug，溝通沒有錯誤訊息可以查。</span><span>04 / 07</span>
           </footer>
           <aside class="notes-source">
-            今年工作最大的變化，是組織有一點小調整。小到組織圖少了幾個節點，我的待辦事項多了好幾排。
-            去年 Leader 忙不過來，開始分擔帶人的工作，協助管理兩位
-            Member。後來課長離職，部分 PM 協調需求的工作也落到自己身上。
+            今年工作最大的變化，是組織有一點小調整。小到組織圖少了幾個節點，我的待辦事項多了好幾排。 去年 Leader
+            忙不過來，開始分擔帶人的工作，協助管理兩位 Member。後來課長離職，部分 PM 協調需求的工作也落到自己身上。
             職稱還是軟體工程師，工作內容逐漸轉型成文件工程師。
-            當初選擇當軟體工程師，是覺得電腦比較講道理。後來才發現，程式可以
-            debug，溝通沒有錯誤訊息可以查。
+            當初選擇當軟體工程師，是覺得電腦比較講道理。後來才發現，程式可以 debug，溝通沒有錯誤訊息可以查。
             下一步是釐清想累積的技術能力，以及願意承擔的管理職責，不把什麼都接當成唯一成長方式。
-            雖然有點心累，但目前還在
-            Garmin。有員購需求可以找我，至少這件事的需求很明確。
+            雖然有點心累，但目前還在 Garmin。有員購需求可以找我，至少這件事的需求很明確。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="感情發展"
-          data-title="在一起，不一定要講道理"
-        >
-          <header>
-            <span>04 / 感情發展</span><span>長期關係維護紀錄</span>
-          </header>
+        <section class="slide" aria-label="感情發展" data-title="在一起，不一定要講道理">
+          <header><span>04 / 感情發展</span><span>長期關係維護紀錄</span></header>
           <div class="section-head">
             <h2 data-edit="relationship-title">在一起，不一定要講道理</h2>
             <p>STILL TOGETHER</p>
@@ -1659,12 +1552,7 @@
               <p data-edit="relationship-sub">「沒有變化」就是好消息</p>
             </div>
             <div class="relationship-notes">
-              <h3
-                class="relationship-notes-title"
-                data-edit="relationship-notes-title"
-              >
-                感情經營筆記
-              </h3>
+              <h3 class="relationship-notes-title" data-edit="relationship-notes-title">感情經營筆記</h3>
               <article class="principle">
                 <span class="index">01</span>
                 <div>
@@ -1688,9 +1576,7 @@
               </article>
             </div>
           </div>
-          <footer>
-            <span>個人心得，非通用操作手冊</span><span>05 / 07</span>
-          </footer>
+          <footer><span>個人心得，非通用操作手冊</span><span>05 / 07</span></footer>
           <aside class="notes-source">
             講完工作的溝通，接下來談生活的溝通。這一頁不追求誰比較有道理，追求的是兩個人都過得好。
             感情狀態沒有異動，仍然是同一位對象。這裡的沒有變化，是好消息。
@@ -1700,14 +1586,8 @@
             以上是個人使用心得，不是通用操作手冊。有幫助就參考，沒幫助就當這頁沒出現過，請勿自行對號入座。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="退休計畫"
-          data-title="把不想上班，變成可追蹤的計畫"
-        >
-          <header>
-            <span>05 / 人生進展</span><span>退休準備與資產累積</span>
-          </header>
+        <section class="slide" aria-label="退休計畫" data-title="把不想上班，變成可追蹤的計畫">
+          <header><span>05 / 人生進展</span><span>退休準備與資產累積</span></header>
           <div class="section-head">
             <h2 data-edit="finance-title">把「不想上班」變成計畫</h2>
             <p>FUTURE FREEDOM</p>
@@ -1715,12 +1595,8 @@
           <div class="content finance">
             <div class="finance-left">
               <div class="quiz initial" data-until="1">
-                <p class="finance-intro" data-edit="finance-intro">
-                  理財是數學，不是玄學
-                </p>
-                <p class="finance-formula">
-                  10,000 x [(1 + 5%/12)<sup>360</sup> - 1] ÷ (5%/12) = ?
-                </p>
+                <p class="finance-intro" data-edit="finance-intro">理財是數學，不是玄學</p>
+                <p class="finance-formula">10,000 x [(1 + 5%/12)<sup>360</sup> - 1] ÷ (5%/12) = ?</p>
               </div>
               <div class="answer step" data-step="1">
                 <p class="kicker">30 年後 / 試算期末資產</p>
@@ -1734,9 +1610,7 @@
                   role="img"
                   aria-label="30 年資產累積圖：本金 360 萬元，試算期末資產 832.26 萬元"
                 ></canvas>
-                <div class="legend">
-                  <span>投入本金</span><span>試算總資產</span>
-                </div>
+                <div class="legend"><span>投入本金</span><span>試算總資產</span></div>
               </div>
             </div>
             <div>
@@ -1755,9 +1629,7 @@
                 </div>
               </div>
               <div class="goal step" data-step="1">
-                <div class="goal-line">
-                  <span>進度</span><strong>20%</strong>
-                </div>
+                <div class="goal-line"><span>進度</span><strong>20%</strong></div>
                 <div
                   class="progress-track"
                   role="progressbar"
@@ -1782,41 +1654,27 @@
               </div>
             </div>
           </div>
-          <p class="finance-note step" data-step="1">
-            先為生活留足餘裕，再讓資金為未來累積
-          </p>
+          <p class="finance-note step" data-step="1">先為生活留足餘裕，再讓資金為未來累積</p>
           <footer>
-            <span class="step" data-step="1" data-edit="finance-footer"
-              >剩下五分之四，明天還是要打卡</span
+            <span class="step" data-step="1" data-edit="finance-footer">剩下五分之四，明天還是要打卡</span
             ><span>06 / 07</span>
           </footer>
           <aside class="notes-source">
             感情希望長久，工作倒不一定。接下來談一個需要長期經營的計畫：退休。
-            理財是數學，不是許願。畫面先只呈現引言與公式，口頭補充：每月底投入 1
-            萬元，持續 30 年，年利率 5%
-            按月複利，會累積多少？請觀眾猜，再按下一步揭曉。 累計投入 360
-            萬，期末資產約 832.26 萬。算式：10,000 x ((1 + 0.05 / 12)^360 - 1) /
-            (0.05 / 12)。這是月報酬率固定為 5%/12 的假設，不是實際績效保證。
+            理財是數學，不是許願。畫面先只呈現引言與公式，口頭補充：每月底投入 1 萬元，持續 30 年，年利率 5%
+            按月複利，會累積多少？請觀眾猜，再按下一步揭曉。 累計投入 360 萬，期末資產約 832.26 萬。算式：10,000 x ((1 +
+            0.05 / 12)^360 - 1) / (0.05 / 12)。這是月報酬率固定為 5%/12 的假設，不是實際績效保證。
             目前在工作階段。半退休不是不工作，而是不必只為高薪選擇工作；退休則需要資產足以支應生活，且預留風險緩衝。
-            配息追蹤目標為平均每月 5 萬、全年 60 萬，目前進度
-            20%。這是個人配息目標，和左側試算是兩件事。 可選：點配息進度按鈕，看
-            10 月 0056、11 月 00878、12 月 00919
+            配息追蹤目標為平均每月 5 萬、全年 60 萬，目前進度 20%。這是個人配息目標，和左側試算是兩件事。
+            可選：點配息進度按鈕，看 10 月 0056、11 月 00878、12 月 00919
             的追蹤表。實際時程以公告為準，金額待確認；可輸入實際數字並儲存在本機。
             不是明天就不工作，而是逐步累積可以選擇怎麼工作的餘裕。
           </aside>
         </section>
-        <section
-          class="slide"
-          aria-label="年度回顧"
-          data-title="往前走，要把生活帶上，科技也不能落後"
-        >
-          <header>
-            <span>06 / 年度回顧</span><span>成果結算與下一年度方向</span>
-          </header>
+        <section class="slide" aria-label="年度回顧" data-title="往前走，要把生活帶上，科技也不能落後">
+          <header><span>06 / 年度回顧</span><span>成果結算與下一年度方向</span></header>
           <div class="section-head">
-            <h2 data-edit="review-title">
-              今年的成果不算驚天動地，但至少還在前進
-            </h2>
+            <h2 data-edit="review-title">今年的成果不算驚天動地，但至少還在前進</h2>
             <p>YEAR-END BALANCE</p>
           </div>
           <div class="content review-grid">
@@ -1838,27 +1696,19 @@
           </div>
           <div class="closing">
             <div>
-              <h3 data-edit="closing-title">
-                往前走，要把生活帶上，科技也不能落後
-              </h3>
+              <h3 data-edit="closing-title">往前走，要把生活帶上，科技也不能落後</h3>
             </div>
             <span class="stamp"
-              ><s>Work-Life Balance</s
-              ><strong>Less Work.<br />More Life.</strong></span
+              ><s>Work-Life Balance</s><strong>Less Work.<br />More Life.</strong></span
             >
           </div>
           <footer>
-            <span data-edit="last-line"
-              >謝謝大家。希望下次報告的時候，我已經下班了</span
-            ><span>07 / 07</span>
+            <span data-edit="last-line">謝謝大家。希望下次報告的時候，我已經下班了</span><span>07 / 07</span>
           </footer>
           <aside class="notes-source">
-            今年三件值得肯定的事：持續任職，也接下更多責任；Speak 連續學習累積
-            700 天；把護照辦好。
-            幽默版：目前仍在職，尚未把退休計畫誤按成離職申請。
-            尚未完成的課題，是找回 WLB。Less Work. More Life.
-            少一點被工作佔滿，多一點留給自己的生活。
-            不必每件事都走在最前面，但要持續前進，也別把自己的生活落在後面。
+            今年三件值得肯定的事：持續任職，也接下更多責任；Speak 連續學習累積 700 天；把護照辦好。
+            幽默版：目前仍在職，尚未把退休計畫誤按成離職申請。 尚未完成的課題，是找回 WLB。Less Work. More Life.
+            少一點被工作佔滿，多一點留給自己的生活。 不必每件事都走在最前面，但要持續前進，也別把自己的生活落在後面。
             今年沒有什麼驚天動地的成就，但有把工作扛住、把感情顧好，也持續學習、開始替未來做打算。明年不一定要做更多，但希望留給自己的時間，能比今年多一點。
             以上是我的年度人生發展成果報告。謝謝大家，希望下次報告的時候，我已經下班了。
           </aside>
@@ -1866,37 +1716,17 @@
       </main>
     </div>
     <nav class="deck-controls show" aria-label="簡報控制">
-      <button
-        class="icon-button"
-        id="previous"
-        title="上一步（←）"
-        aria-label="上一步"
-      >
+      <button class="icon-button" id="previous" title="上一步（←）" aria-label="上一步">
         <svg class="icon"><use href="#arrow-left" /></svg>
       </button>
       <output class="counter" id="counter" aria-live="polite">1 / 7</output>
-      <button
-        class="icon-button"
-        id="next"
-        title="下一步（→／空白鍵）"
-        aria-label="下一步"
-      >
+      <button class="icon-button" id="next" title="下一步（→／空白鍵）" aria-label="下一步">
         <svg class="icon"><use href="#arrow-right" /></svg>
       </button>
-      <button
-        class="icon-button"
-        id="notesButton"
-        title="講者備註（N）"
-        aria-label="講者備註"
-      >
+      <button class="icon-button" id="notesButton" title="講者備註（N）" aria-label="講者備註">
         <svg class="icon"><use href="#notes" /></svg>
       </button>
-      <button
-        class="icon-button"
-        id="fullscreen"
-        title="全螢幕（F）"
-        aria-label="全螢幕"
-      >
+      <button class="icon-button" id="fullscreen" title="全螢幕（F）" aria-label="全螢幕">
         <svg class="icon"><use href="#expand" /></svg>
       </button>
     </nav>
@@ -1910,39 +1740,15 @@
     >
       <svg class="icon"><use href="#pencil" /></svg>
     </button>
-    <section
-      class="utility"
-      id="notesPanel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="notesTitle"
-      hidden
-    >
-      <button
-        class="icon-button close"
-        data-close
-        title="關閉"
-        aria-label="關閉"
-      >
+    <section class="utility" id="notesPanel" role="dialog" aria-modal="true" aria-labelledby="notesTitle" hidden>
+      <button class="icon-button close" data-close title="關閉" aria-label="關閉">
         <svg class="icon"><use href="#close" /></svg>
       </button>
       <h2 id="notesTitle"></h2>
       <p id="notesText"></p>
     </section>
-    <section
-      class="utility"
-      id="salaryPanel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="salaryTitle"
-      hidden
-    >
-      <button
-        class="icon-button close"
-        data-close
-        title="關閉"
-        aria-label="關閉"
-      >
+    <section class="utility" id="salaryPanel" role="dialog" aria-modal="true" aria-labelledby="salaryTitle" hidden>
+      <button class="icon-button close" data-close title="關閉" aria-label="關閉">
         <svg class="icon"><use href="#close" /></svg>
       </button>
       <h2 id="salaryTitle">月薪換算單位：iPhone 18/月</h2>
@@ -1970,20 +1776,8 @@
       </table>
       <p>至少不是用 Nokia 計薪。</p>
     </section>
-    <section
-      class="utility"
-      id="dividendPanel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="dividendTitle"
-      hidden
-    >
-      <button
-        class="icon-button close"
-        data-close
-        title="關閉"
-        aria-label="關閉"
-      >
+    <section class="utility" id="dividendPanel" role="dialog" aria-modal="true" aria-labelledby="dividendTitle" hidden>
+      <button class="icon-button close" data-close title="關閉" aria-label="關閉">
         <svg class="icon"><use href="#close" /></svg>
       </button>
       <h2 id="dividendTitle">短期配息追蹤 / 10-12 月</h2>
@@ -2043,8 +1837,8 @@
       <button class="dialog-action" id="saveDividends">儲存紀錄</button>
       <p class="dialog-status" id="dividendStatus" role="status"></p>
       <p class="disclaimer">
-        月份為預計追蹤安排，實際時程與金額以公告為準。配息不等於總報酬；此表不會自動變更年度目標的
-        20% 進度。紀錄僅儲存於目前瀏覽器，不會上傳。
+        月份為預計追蹤安排，實際時程與金額以公告為準。配息不等於總報酬；此表不會自動變更年度目標的 20%
+        進度。紀錄僅儲存於目前瀏覽器，不會上傳。
       </p>
     </section>
     <div class="notice" id="notice" role="status"></div>
@@ -2058,10 +1852,7 @@
           this.editing = false;
           this.storageKey = "willie-annual-report-2025-v1";
           this.originalMarkup = new Map(
-            [...document.querySelectorAll("[data-edit]")].map((element) => [
-              element.dataset.edit,
-              element.innerHTML,
-            ]),
+            [...document.querySelectorAll("[data-edit]")].map((element) => [element.dataset.edit, element.innerHTML]),
           );
           this.restoreEdits();
           this.fit = () => {
@@ -2072,15 +1863,10 @@
           this.fit();
           this.bindControls();
           const requested = Number(location.hash.slice(1));
-          this.showSlide(
-            Number.isInteger(requested) && requested > 0 ? requested - 1 : 0,
-          );
+          this.showSlide(Number.isInteger(requested) && requested > 0 ? requested - 1 : 0);
         }
         showSlide(index) {
-          this.currentSlide = Math.max(
-            0,
-            Math.min(index, this.slides.length - 1),
-          );
+          this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
           this.slides.forEach((slide, slideIndex) => {
             const active = slideIndex === this.currentSlide;
             slide.classList.toggle("active", active);
@@ -2089,8 +1875,7 @@
             slide.setAttribute("aria-hidden", String(!active));
           });
           this.renderSteps();
-          document.getElementById("counter").textContent =
-            `${this.currentSlide + 1} / ${this.slides.length}`;
+          document.getElementById("counter").textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
           try {
             history.replaceState(null, "", `#${this.currentSlide + 1}`);
           } catch {}
@@ -2108,18 +1893,15 @@
             element.classList.toggle("gone", gone);
             element.setAttribute("aria-hidden", String(gone));
           });
-          document.getElementById("previous").disabled =
-            this.currentSlide === 0 && progress === 0;
-          document.getElementById("next").disabled =
-            this.currentSlide === this.slides.length - 1 &&
-            progress >= this.maxSteps();
+          document.getElementById("previous").disabled = false;
+          document.getElementById("next").disabled = false;
         }
         maxSteps() {
           return Math.max(
             0,
-            ...[
-              ...this.slides[this.currentSlide].querySelectorAll("[data-step]"),
-            ].map((element) => Number(element.dataset.step)),
+            ...[...this.slides[this.currentSlide].querySelectorAll("[data-step]")].map((element) =>
+              Number(element.dataset.step),
+            ),
           );
         }
         next() {
@@ -2127,14 +1909,14 @@
           if (this.steps[this.currentSlide] < this.maxSteps()) {
             this.steps[this.currentSlide]++;
             this.renderSteps();
-          } else this.showSlide(this.currentSlide + 1);
+          } else this.showSlide((this.currentSlide + 1) % this.slides.length);
         }
         previous() {
           if (this.editing || this.openPanel) return;
           if (this.steps[this.currentSlide] > 0) {
             this.steps[this.currentSlide]--;
             this.renderSteps();
-          } else this.showSlide(this.currentSlide - 1);
+          } else this.showSlide((this.currentSlide - 1 + this.slides.length) % this.slides.length);
         }
         panel(id) {
           this.focusBeforePanel = document.activeElement;
@@ -2158,8 +1940,7 @@
           document.getElementById("notesTitle").textContent =
             `${this.currentSlide + 1}. ${this.slides[this.currentSlide].dataset.title}`;
           document.getElementById("notesText").textContent =
-            this.slides[this.currentSlide].querySelector(".notes-source")
-              ?.textContent || "";
+            this.slides[this.currentSlide].querySelector(".notes-source")?.textContent || "";
           this.panel("notesPanel");
         }
         toggleEditing() {
@@ -2167,9 +1948,7 @@
           this.editing = !this.editing;
           document
             .querySelectorAll("[data-edit]")
-            .forEach((element) =>
-              element.setAttribute("contenteditable", String(this.editing)),
-            );
+            .forEach((element) => element.setAttribute("contenteditable", String(this.editing)));
           const toggle = document.getElementById("editToggle");
           toggle.classList.toggle("active", this.editing);
           toggle.setAttribute("aria-pressed", String(this.editing));
@@ -2177,18 +1956,14 @@
         }
         restoreEdits() {
           try {
-            const edits = JSON.parse(
-              localStorage.getItem(this.storageKey) || "{}",
-            );
+            const edits = JSON.parse(localStorage.getItem(this.storageKey) || "{}");
             document.querySelectorAll("[data-edit]").forEach((element) => {
               if (typeof edits[element.dataset.edit] === "string") {
                 element.replaceChildren();
-                edits[element.dataset.edit]
-                  .split("\n")
-                  .forEach((line, index) => {
-                    if (index) element.append(document.createElement("br"));
-                    element.append(document.createTextNode(line));
-                  });
+                edits[element.dataset.edit].split("\n").forEach((line, index) => {
+                  if (index) element.append(document.createElement("br"));
+                  element.append(document.createTextNode(line));
+                });
               }
             });
           } catch {}
@@ -2196,10 +1971,7 @@
         saveEdits() {
           const edits = {};
           document.querySelectorAll("[data-edit]").forEach((element) => {
-            if (
-              element.innerHTML !==
-              this.originalMarkup.get(element.dataset.edit)
-            )
+            if (element.innerHTML !== this.originalMarkup.get(element.dataset.edit))
               edits[element.dataset.edit] = element.innerText;
           });
           try {
@@ -2219,19 +1991,13 @@
         download() {
           this.saveEdits();
           const copy = document.documentElement.cloneNode(true);
-          copy
-            .querySelectorAll("[contenteditable]")
-            .forEach((element) => element.removeAttribute("contenteditable"));
-          copy
-            .querySelectorAll("[inert]")
-            .forEach((element) => element.removeAttribute("inert"));
+          copy.querySelectorAll("[contenteditable]").forEach((element) => element.removeAttribute("contenteditable"));
+          copy.querySelectorAll("[inert]").forEach((element) => element.removeAttribute("inert"));
           copy.querySelectorAll(".utility").forEach((element) => {
             element.hidden = true;
           });
           copy.querySelector("#editToggle").classList.remove("active", "show");
-          copy
-            .querySelector("#editToggle")
-            .setAttribute("aria-pressed", "false");
+          copy.querySelector("#editToggle").setAttribute("aria-pressed", "false");
           copy.querySelector("#notice").textContent = "";
           const url = URL.createObjectURL(
             new Blob(["<!doctype html>\n", copy.outerHTML], {
@@ -2255,15 +2021,10 @@
         bindControls() {
           document.getElementById("next").onclick = () => this.next();
           document.getElementById("previous").onclick = () => this.previous();
-          document.getElementById("notesButton").onclick = () =>
-            this.showNotes();
-          document.getElementById("fullscreen").onclick = () =>
-            this.fullscreen();
-          document
-            .getElementById("save")
-            ?.addEventListener("click", () => this.download());
-          document.getElementById("editToggle").onclick = () =>
-            this.toggleEditing();
+          document.getElementById("notesButton").onclick = () => this.showNotes();
+          document.getElementById("fullscreen").onclick = () => this.fullscreen();
+          document.getElementById("save")?.addEventListener("click", () => this.download());
+          document.getElementById("editToggle").onclick = () => this.toggleEditing();
           document.querySelectorAll("[data-close]").forEach((button) => {
             button.onclick = () => this.closePanel();
           });
@@ -2278,9 +2039,7 @@
               if (!selection.rangeCount) return;
               const range = selection.getRangeAt(0);
               range.deleteContents();
-              const text = document.createTextNode(
-                event.clipboardData.getData("text/plain"),
-              );
+              const text = document.createTextNode(event.clipboardData.getData("text/plain"));
               range.insertNode(text);
               range.setStartAfter(text);
               range.collapse(true);
@@ -2290,10 +2049,7 @@
             });
           });
           addEventListener("keydown", (event) => {
-            if (
-              (event.ctrlKey || event.metaKey) &&
-              event.key.toLowerCase() === "s"
-            ) {
+            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "s") {
               event.preventDefault();
               this.download();
               return;
@@ -2305,18 +2061,11 @@
             }
             if (this.openPanel) {
               if (event.key === "Tab") {
-                const controls = [
-                  ...this.openPanel.querySelectorAll(
-                    'button,input,[tabindex="0"]',
-                  ),
-                ];
+                const controls = [...this.openPanel.querySelectorAll('button,input,[tabindex="0"]')];
                 if (event.shiftKey && document.activeElement === controls[0]) {
                   event.preventDefault();
                   controls.at(-1).focus();
-                } else if (
-                  !event.shiftKey &&
-                  document.activeElement === controls.at(-1)
-                ) {
+                } else if (!event.shiftKey && document.activeElement === controls.at(-1)) {
                   event.preventDefault();
                   controls[0].focus();
                 }
@@ -2339,9 +2088,7 @@
             if (event.key.toLowerCase() === "n") this.showNotes();
             if (event.key.toLowerCase() === "f") this.fullscreen();
             if (event.key === " " && event.target.closest("button")) return;
-            if (
-              ["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)
-            ) {
+            if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) {
               event.preventDefault();
               this.next();
             }
@@ -2363,13 +2110,7 @@
           addEventListener(
             "wheel",
             (event) => {
-              if (
-                this.openPanel ||
-                this.editing ||
-                event.ctrlKey ||
-                Math.abs(event.deltaY) < 15
-              )
-                return;
+              if (this.openPanel || this.editing || event.ctrlKey || Math.abs(event.deltaY) < 15) return;
               event.preventDefault();
               if (Date.now() - lastWheel < 650) return;
               lastWheel = Date.now();
@@ -2381,10 +2122,7 @@
           this.stage.addEventListener(
             "touchstart",
             (event) => {
-              if (
-                event.touches.length !== 1 ||
-                event.target.closest("button,input,[contenteditable=true]")
-              ) {
+              if (event.touches.length !== 1 || event.target.closest("button,input,[contenteditable=true]")) {
                 touchStart = null;
                 return;
               }
@@ -2412,10 +2150,7 @@
               toggle.classList.add("show");
             };
             element.onmouseleave = () => {
-              hideTimer = setTimeout(
-                () => toggle.classList.remove("show"),
-                400,
-              );
+              hideTimer = setTimeout(() => toggle.classList.remove("show"), 400);
             };
           });
           hotzone.onclick = () => this.toggleEditing();
@@ -2424,10 +2159,7 @@
           const revealControls = () => {
             controls.classList.add("show");
             clearTimeout(controlsTimer);
-            controlsTimer = setTimeout(
-              () => controls.classList.remove("show"),
-              2000,
-            );
+            controlsTimer = setTimeout(() => controls.classList.remove("show"), 2000);
           };
           addEventListener("pointermove", revealControls);
           addEventListener("touchstart", revealControls, { passive: true });
@@ -2438,12 +2170,7 @@
       function applyNumeralFont(root) {
         const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
           acceptNode(node) {
-            if (
-              !/\d/.test(node.nodeValue) ||
-              node.parentElement.closest(
-                'script,style,[contenteditable="true"]',
-              )
-            )
+            if (!/\d/.test(node.nodeValue) || node.parentElement.closest('script,style,[contenteditable="true"]'))
               return NodeFilter.FILTER_REJECT;
             return NodeFilter.FILTER_ACCEPT;
           },
@@ -2485,8 +2212,7 @@
           context.stroke();
           context.fillText(`${year} 年`, position - 12, 260);
         });
-        const balance = (months) =>
-          (10000 * (Math.pow(1 + 0.05 / 12, months) - 1)) / (0.05 / 12);
+        const balance = (months) => (10000 * (Math.pow(1 + 0.05 / 12, months) - 1)) / (0.05 / 12);
         const maximum = balance(360);
         [
           ["#183c30", (months) => months * 10000],
@@ -2503,45 +2229,27 @@
           }
           context.stroke();
           context.beginPath();
-          context.arc(
-            origin.x + width,
-            origin.y - (calculate(360) / maximum) * height,
-            7,
-            0,
-            Math.PI * 2,
-          );
+          context.arc(origin.x + width, origin.y - (calculate(360) / maximum) * height, 7, 0, Math.PI * 2);
           context.fillStyle = color;
           context.fill();
         });
       }
       document.fonts.ready.then(drawVisuals);
-      const dividendInputs = [
-        ...document.querySelectorAll("#dividendPanel input"),
-      ];
+      const dividendInputs = [...document.querySelectorAll("#dividendPanel input")];
       try {
-        const records = JSON.parse(
-          localStorage.getItem("willie-dividends-2025") || "{}",
-        );
+        const records = JSON.parse(localStorage.getItem("willie-dividends-2025") || "{}");
         dividendInputs.forEach((input) => {
-          if (typeof records[input.id] === "string")
-            input.value = records[input.id];
+          if (typeof records[input.id] === "string") input.value = records[input.id];
         });
       } catch {}
       document.getElementById("saveDividends").onclick = () => {
         if (dividendInputs.some((input) => !input.reportValidity())) return;
-        const records = Object.fromEntries(
-          dividendInputs.map((input) => [input.id, input.value]),
-        );
+        const records = Object.fromEntries(dividendInputs.map((input) => [input.id, input.value]));
         try {
-          localStorage.setItem(
-            "willie-dividends-2025",
-            JSON.stringify(records),
-          );
-          document.getElementById("dividendStatus").textContent =
-            "已儲存於此瀏覽器。";
+          localStorage.setItem("willie-dividends-2025", JSON.stringify(records));
+          document.getElementById("dividendStatus").textContent = "已儲存於此瀏覽器。";
         } catch {
-          document.getElementById("dividendStatus").textContent =
-            "此瀏覽器不允許本機儲存，紀錄尚未保存。";
+          document.getElementById("dividendStatus").textContent = "此瀏覽器不允許本機儲存，紀錄尚未保存。";
         }
       };
     </script>
