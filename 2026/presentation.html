@@ -719,6 +719,170 @@
         position: relative;
         height: 526px;
       }
+      .career-scene {
+        position: relative;
+        height: 570px;
+      }
+      .career-main {
+        display: grid;
+        grid-template-columns: 840px 1fr;
+        gap: 64px;
+        height: 100%;
+      }
+      .career-heading {
+        position: relative;
+        height: 72px;
+        font-size: 34px;
+      }
+      .career-heading span { position: absolute; inset: 0; }
+      .career-heading .step { color: var(--text-blue); }
+      .career-org {
+        min-width: 0;
+      }
+      .career-chart {
+        position: relative;
+        width: 1050px;
+        height: 550px;
+        transform: scale(0.8);
+        transform-origin: top left;
+      }
+      .career-lines {
+        position: absolute;
+        inset: 0;
+        width: 1050px;
+        height: 550px;
+        overflow: visible;
+        fill: none;
+        stroke: var(--line);
+        stroke-width: 3;
+      }
+      .career-lines .coordination {
+        stroke: var(--text-berry);
+        stroke-dasharray: 9 7;
+      }
+      .career-node {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        height: 70px;
+        border: 2px solid var(--line);
+        border-radius: 6px;
+        background: var(--slide-bg);
+        font-size: 27px;
+        font-weight: 700;
+        transition: left 0.65s ease, top 0.65s ease, opacity 0.4s, border-color 0.4s;
+      }
+      .career-manager { left: 690px; top: 0; width: 230px; }
+      .career-chief { left: 690px; top: 120px; width: 230px; }
+      .career-leader { left: 690px; top: 260px; width: 230px; }
+      .career-pm { left: 30px; top: 120px; width: 140px; color: var(--text-berry); }
+      .career-member { top: 432px; width: 90px; height: 70px; font-size: 24px; }
+      .career-member-one { left: 200px; }
+      .career-member-two { left: 310px; }
+      .career-member-three { left: 660px; }
+      .career-member-four { left: 770px; }
+      .career-member-five { left: 880px; }
+      .career-me {
+        left: 420px;
+        top: 432px;
+        width: 150px;
+        color: #fff;
+        background: var(--text-blue);
+        border-color: var(--text-blue);
+        font-size: 36px;
+        z-index: 2;
+      }
+      .career-team-label {
+        position: absolute;
+        top: 520px;
+        font-size: 23px;
+        color: var(--muted);
+      }
+      .career-team-before { left: 380px; }
+      .career-team-mine { left: 180px; color: var(--text-blue); }
+      .career-team-others { left: 738px; }
+      .career-chief-exit {
+        position: absolute;
+        top: 196px;
+        left: 766px;
+        font-size: 22px;
+        color: var(--muted);
+      }
+      .career-transfer {
+        position: absolute;
+        top: 250px;
+        left: 25px;
+        font-size: 22px;
+        color: var(--text-berry);
+      }
+      .career-transfer-before {
+        top: 280px;
+        left: 200px;
+        line-height: 30px;
+      }
+      .career-pm-exit {
+        position: absolute;
+        top: 196px;
+        left: 78px;
+        font-size: 22px;
+        color: var(--muted);
+      }
+      .slide[aria-label="職涯進度"][data-progress="0"] .career-pm { left: 450px; top: 260px; }
+      .slide[aria-label="職涯進度"]:not([data-progress="0"]) .career-me { left: 200px; top: 260px; }
+      .slide[aria-label="職涯進度"]:not([data-progress="0"]) .career-member-one { left: 170px; }
+      .slide[aria-label="職涯進度"]:not([data-progress="0"]) .career-member-two { left: 290px; }
+      .slide[aria-label="職涯進度"][data-progress="1"] .career-chief,
+      .slide[aria-label="職涯進度"][data-progress="1"] .career-pm {
+        border-style: dashed;
+        opacity: 0.3;
+      }
+      .career-routines {
+        position: relative;
+        border-left: 2px solid var(--line);
+        padding-left: 42px;
+      }
+      .career-routine {
+        position: absolute;
+        inset: 0 0 0 42px;
+      }
+      .career-routine h3 { font-size: 34px; margin-bottom: 24px; }
+      .career-routine-after h3 { color: var(--text-blue); }
+      .career-routine-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 30px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .career-routine-list li {
+        display: flex;
+        align-items: center;
+        min-height: 78px;
+        border-top: 2px solid var(--line);
+        font-size: 30px;
+      }
+      .career-routine-list strong { color: var(--text-blue); font-size: 36px; }
+      .career-routine-after .career-routine-list strong { color: var(--text-berry); font-size: 30px; }
+      .career-punchline {
+        margin-top: 28px;
+        padding-top: 24px;
+        border-top: 3px solid var(--ink);
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+      .career-punchline strong { color: var(--text-berry); }
+      @media (prefers-reduced-motion: reduce) {
+        .career-scene * { transition: none !important; animation: none !important; }
+      }
+      @media print {
+        .career-me { left: 200px !important; top: 260px !important; }
+        .career-member-one { left: 170px !important; }
+        .career-member-two { left: 290px !important; }
+        .career-pm { left: 30px !important; top: 120px !important; }
+        .career-chief, .career-pm { border-style: dashed; opacity: 0.3; }
+      }
       .dragon-reveal {
         position: absolute;
         inset: 0;
@@ -1508,36 +1672,86 @@
         <section class="slide" aria-label="職涯進度" data-title="組織變扁，職責變寬">
           <header><span>03 / 職涯進度</span><span>工作範圍異動紀錄</span></header>
           <div class="section-head">
-            <h2 data-edit="career-title">組織上的小變化</h2>
+            <h2 data-edit="career-title">職稱沒變，服務範圍持續擴張</h2>
             <p>SCOPE OF WORK</p>
           </div>
-          <div class="content compare-wrap">
-            <div class="compare">
-              <div>
-                <h3>原本 / 分工明確</h3>
-                <div class="org-chain">
-                  <span>部門經理</span><span>課長</span><span>Leader</span><strong>Member / 我</strong>
-                </div>
-                <p class="small" style="margin-top: 25px">PM 協調需求，再交給團隊開發。</p>
+          <div class="content career-scene">
+            <div class="career-main">
+              <div class="career-org">
+                <h3 class="career-heading"><span class="initial" data-until="1">原本 / 組織</span><span class="step" data-step="1">現在 / 組織</span></h3>
+              <div class="career-chart" role="group" aria-label="組織變化：原本外部需求先找 PM，再交給 Team Leader，六位成員包含我；後來我協助帶兩位，另三位由 Team Leader 帶領；課長與 PM 離職後，外部需求直接找到我。">
+                <svg class="career-lines" viewBox="0 0 1050 550" aria-hidden="true">
+                  <defs>
+                    <marker id="career-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                      <path d="M1 1 L9 5 L1 9" fill="none" stroke="var(--text-berry)" stroke-width="1.5" />
+                    </marker>
+                  </defs>
+                  <g class="initial" data-until="1"><path d="M805 70 V120 M805 190 V260" /></g>
+                  <g class="step" data-step="1"><path d="M805 70 H975 V240 H805 V260" /></g>
+                  <g class="initial" data-until="1"><path d="M805 330 V390 M245 432 V390 H925 V432 M355 390 V432 M495 390 V432 M705 390 V432 M815 390 V432" /></g>
+                  <g class="step" data-step="1">
+                    <path d="M690 295 H350 M275 330 V410 M215 432 V410 H335 V432 M805 330 V410 M705 432 V410 H925 V432" />
+                  </g>
+                  <g class="coordination initial" data-until="1">
+                    <path class="career-inbound-before" d="M300 295 H442" marker-end="url(#career-arrow)" />
+                    <path d="M590 295 H682" marker-end="url(#career-arrow)" />
+                  </g>
+                  <g class="coordination step" data-step="1"><path d="M30 295 H192" marker-end="url(#career-arrow)" /></g>
+                </svg>
+                <div class="career-node career-manager">部門經理</div>
+                <div class="career-node career-chief">課長</div>
+                <span class="career-chief-exit step" data-step="1">離職</span>
+                <div class="career-node career-leader">Team Leader</div>
+                <div class="career-node career-pm">PM</div>
+                <span class="career-pm-exit step" data-step="1">離職</span>
+                <span class="career-transfer career-transfer-before initial" data-until="1">外部需求</span>
+                <span class="career-transfer step" data-step="1">外部需求</span>
+                <div class="career-node career-member career-member-one">同事</div>
+                <div class="career-node career-member career-member-two">同事</div>
+                <div class="career-node career-me">我</div>
+                <div class="career-node career-member career-member-three">同事</div>
+                <div class="career-node career-member career-member-four">同事</div>
+                <div class="career-node career-member career-member-five">同事</div>
+                <span class="career-team-label career-team-before initial" data-until="1">6 位成員，包含我</span>
+                <span class="career-team-label career-team-mine step" data-step="1">協助帶 2 位</span>
+                <span class="career-team-label career-team-others step" data-step="1">其餘 3 位</span>
               </div>
-              <div>
-                <h3>職稱沒變，服務範圍持續擴張</h3>
-                <div class="responsibility"><strong>對下</strong><span>分配工作、追蹤進度</span></div>
-                <div class="responsibility"><strong>對上</strong><span>交付成果、解釋問題</span></div>
-                <div class="responsibility"><strong>對外</strong><span>從「想要」到「做得出來」</span></div>
+              </div>
+              <div class="career-routines">
+                <div class="career-routine career-routine-before initial" data-until="1">
+                  <h3>原本 / 一天的作息</h3>
+                  <ul class="career-routine-list">
+                    <li>查看任務清單</li><li><strong>coding</strong></li>
+                    <li>daily sync</li><li>旁聽會議</li>
+                    <li>刷公司留言板</li><li>code review</li>
+                    <li>逛超商</li><li>看風景</li>
+                  </ul>
+                  <p class="career-punchline">我的工作，在任務清單裡。<br />寫累了，看看窗外。</p>
+                </div>
+                <div class="career-routine career-routine-after step" data-step="1">
+                  <h3>現在 / 一天的作息</h3>
+                  <ul class="career-routine-list">
+                    <li>看信件</li><li>查問題</li>
+                    <li><strong>準備會議</strong></li><li><strong>開會</strong></li>
+                    <li><strong>整理會議記錄</strong></li><li>整理需求</li>
+                    <li>code review</li><li>週報月報</li>
+                  </ul>
+                  <p class="career-punchline"><strong>別人的任務清單裡，都有我。</strong><br />開完了，看看下一場。</p>
+                </div>
               </div>
             </div>
           </div>
           <footer>
-            <span data-edit="career-footer">程式可以 debug，溝通沒有錯誤訊息可以查。</span><span>04 / 07</span>
+            <span data-edit="career-footer">以前面對的是講道理的電腦，現在面對的是不一定講道理的人</span><span>04 / 07</span>
           </footer>
           <aside class="notes-source">
-            今年工作最大的變化，是組織有一點小調整。小到組織圖少了幾個節點，我的待辦事項多了好幾排。 去年 Leader
-            忙不過來，開始分擔帶人的工作，協助管理兩位 Member。後來課長離職，部分 PM 協調需求的工作也落到自己身上。
-            職稱還是軟體工程師，工作內容逐漸轉型成文件工程師。
-            當初選擇當軟體工程師，是覺得電腦比較講道理。後來才發現，程式可以 debug，溝通沒有錯誤訊息可以查。
-            下一步是釐清想累積的技術能力，以及願意承擔的管理職責，不把什麼都接當成唯一成長方式。
-            雖然有點心累，但目前還在 Garmin。有員購需求可以找我，至少這件事的需求很明確。
+            【第一階段：原本｜約 25 秒】今年工作上最大的變化，是組織有一點「小調整」。原本外部需求先找 PM，由 PM 協調後交給 Leader，我是下面六個成員之一。一天大概就是查看任務、coding、daily sync、code review；會議可以旁聽，中間還能刷一下公司留言板，逛超商、看風景。我的工作，在任務清單裡。寫累了，看看窗外。
+
+            【按一次下一步，左右同步切換】
+
+            【第二階段：現在｜約 40 秒】去年 Leader 忙不過來，我開始協助帶兩位同事。後來課長離職，PM 也離職了，外部需求就直接找到我。組織圖少了幾個節點……（停一拍）我的待辦事項多了好幾排。現在一天是看信件、查問題，準備會議、開會、整理會議記錄，再整理需求、code review、寫週報月報。以前是旁聽會議，現在連開會前後都包了。別人的任務清單裡，都有我。（停一拍）開完了，看看下一場。職稱沒變，一天的內容先換了一輪。
+
+            【第二階段收束，不再切換畫面｜約 30 秒】其實最有感的，不只是事情變多，而是我最喜歡做的 coding，時間反而被一點一點拿走了。當初喜歡寫程式，是因為電腦比較講道理。以前面對的是講道理的電腦，現在面對的是不一定講道理的人。（停一拍）不過，人跟人相處，也不是講贏了就算成功。這件事，在感情裡更有感。（切到下一頁）
           </aside>
         </section>
         <section class="slide" aria-label="感情發展" data-title="在一起，不一定要講道理">
@@ -1578,7 +1792,7 @@
           </div>
           <footer><span>個人心得，非通用操作手冊</span><span>05 / 07</span></footer>
           <aside class="notes-source">
-            講完工作的溝通，接下來談生活的溝通。這一頁不追求誰比較有道理，追求的是兩個人都過得好。
+            所以這一頁叫「在一起，不一定要講道理」。不是不溝通，而是不只在乎誰比較有道理，也在乎兩個人能不能都過得好。
             感情狀態沒有異動，仍然是同一位對象。這裡的沒有變化，是好消息。
             改變別人很難，先調整自己的期待；放下不必要的堅持，但保留重要的界線。
             不必事事一起才算好好相處。保留各自的興趣與生活，反而能帶著不同的故事回來聊天。
@@ -1883,6 +2097,7 @@
         renderSteps() {
           const slide = this.slides[this.currentSlide];
           const progress = this.steps[this.currentSlide];
+          slide.dataset.progress = String(progress);
           slide.querySelectorAll("[data-step]").forEach((element) => {
             const shown = Number(element.dataset.step) <= progress;
             element.classList.toggle("shown", shown);
