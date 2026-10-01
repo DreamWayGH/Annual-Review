@@ -166,19 +166,13 @@
       }
       button {
         cursor: pointer;
-      }
-      button:disabled {
-        opacity: 0.35;
-        cursor: default;
+        color: inherit;
       }
       h1,
       h2,
       h3,
       p {
         margin: 0;
-      }
-      button {
-        color: inherit;
       }
       svg.icon {
         width: 22px;
@@ -243,7 +237,7 @@
         padding: 42px 38px;
         border-top: 12px solid var(--ink);
         box-shadow: 12px 15px 0 #183c3010;
-        height: 644px;
+        height: 672px;
         position: relative;
       }
       .ticket:after {
@@ -269,32 +263,6 @@
         padding: 20px 0;
         border-bottom: 2px dashed var(--line);
       }
-      .total {
-        text-align: center;
-        padding: 36px 0 24px;
-      }
-      .total small {
-        font-size: 24px;
-      }
-      .total strong {
-        display: block;
-        font-size: 70px;
-        color: var(--accent);
-        margin-top: 10px;
-      }
-      .barcode {
-        height: 54px;
-        background: repeating-linear-gradient(
-          90deg,
-          #183c30 0 3px,
-          transparent 3px 7px,
-          #183c30 7px 9px,
-          transparent 9px 13px,
-          #183c30 13px 20px,
-          transparent 20px 25px
-        );
-        margin: 20px 28px;
-      }
       .stamp {
         display: inline-block;
         background: var(--yellow);
@@ -305,11 +273,6 @@
         font-size: 48px;
         font-weight: 900;
         line-height: 1.2;
-      }
-      .ticket .stamp {
-        position: absolute;
-        right: -22px;
-        top: 107px;
       }
       .active .ticket {
         animation: print-in 0.7s both;
@@ -363,12 +326,7 @@
       .big-number {
         font-size: 180px;
         font-weight: 600;
-        line-height: 1.1;
-      }
-      .statement {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.3;
       }
       .small {
         font-size: 24px;
@@ -391,9 +349,6 @@
       .initial.gone {
         visibility: hidden;
         opacity: 0;
-      }
-      .active .entrance {
-        animation: print-in 0.55s both;
       }
       .notes-source {
         display: none;
@@ -541,13 +496,6 @@
           animation: none !important;
         }
       }
-      .ticket {
-        height: 672px;
-      }
-      .ticket .stamp {
-        top: -38px;
-        right: 22px;
-      }
       .score-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -624,36 +572,43 @@
         gap: 100px;
       }
       .company {
-        font-size: 128px;
+        font-family: "Manrope", sans-serif;
+        font-size: 112px;
         font-weight: 600;
-        line-height: 1.1;
+        line-height: 1.3;
         margin-bottom: 22px;
       }
       .role {
-        font-size: 40px;
-        line-height: 1.7;
+        font-size: 36px;
+        line-height: 1.6;
         margin-bottom: 100px;
       }
       .work-summary {
-        font-size: 55px;
+        font-size: 48px;
         font-weight: 700;
         line-height: 1.6;
-        margin-top: 54px;
+        margin-top: 38px;
       }
       .work-meta {
         display: flex;
         gap: 45px;
-        margin-top: 42px;
+        margin-top: 30px;
         border-top: 2px solid var(--line);
         padding-top: 22px;
         font-size: 27px;
       }
       .work-ticket {
-        height: 584px;
+        height: 630px;
         transform: rotate(2deg);
       }
+      .work-ticket h2 {
+        margin: 0 0 22px;
+      }
       .work-ticket .tenure {
-        margin: 35px 0 12px;
+        font-family: "Manrope", "Noto Sans TC", sans-serif;
+        font-size: 86px;
+        line-height: 1.2;
+        margin: 24px 0 8px;
         text-align: center;
       }
       .work-ticket .tenure span {
@@ -665,59 +620,6 @@
       }
       .work-ticket .small {
         text-align: center;
-      }
-      .error-code {
-        background: var(--ink);
-        color: #fff;
-        padding: 25px;
-        margin-top: 35px;
-        font-size: 30px;
-        line-height: 1.7;
-      }
-      .footer-actions {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-      }
-      .compare {
-        display: grid;
-        grid-template-columns: 550px 1fr;
-        gap: 100px;
-        position: relative;
-      }
-      .compare h3 {
-        font-size: 31px;
-        margin-bottom: 28px;
-      }
-      .org-chain {
-        border-left: 3px solid var(--line);
-        padding-left: 35px;
-        margin-left: 10px;
-        display: grid;
-        gap: 22px;
-      }
-      .org-chain span {
-        font-size: 32px;
-      }
-      .org-chain strong {
-        font-size: 43px;
-      }
-      .responsibility {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: 30px;
-        border-top: 2px solid var(--line);
-        padding: 26px 0;
-        font-size: 30px;
-        line-height: 1.55;
-      }
-      .responsibility strong {
-        color: var(--accent);
-        font-size: 32px;
-      }
-      .compare-wrap {
-        position: relative;
-        height: 526px;
       }
       .career-scene {
         position: relative;
@@ -883,51 +785,6 @@
         .career-pm { left: 30px !important; top: 120px !important; }
         .career-chief, .career-pm { border-style: dashed; opacity: 0.3; }
       }
-      .dragon-reveal {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        grid-template-columns: 1fr 650px;
-        align-items: center;
-        background: var(--slide-bg);
-      }
-      .dragon-reveal h3 {
-        font-size: 114px;
-        line-height: 1.4;
-      }
-      .dragon-reveal p {
-        font-size: 33px;
-        margin-top: 30px;
-      }
-      .dragon-reveal canvas {
-        width: 650px;
-        height: 470px;
-      }
-      .dragon-reveal.shown canvas {
-        animation: dragon-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-      }
-      @keyframes dragon-in {
-        from {
-          opacity: 0;
-          transform: translateX(650px) rotate(20deg);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      .career-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 30px;
-        border-top: 2px solid var(--ink);
-        font-size: 30px;
-        line-height: 1.7;
-      }
-      .career-bottom strong {
-        font-size: 36px;
-      }
       .relationship {
         display: grid;
         grid-template-columns: 580px 1fr;
@@ -936,15 +793,15 @@
       .relationship-mark {
         border-right: 2px solid var(--line);
         padding-right: 60px;
-      }
-      .relationship-mark .forever {
-        font-size: 245px;
-        line-height: 1.1;
-        color: var(--accent);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
       .relationship-mark h3 {
         font-size: 68px;
-        margin-top: 18px;
+        margin-top: 0;
       }
       .relationship-mark p {
         font-size: 29px;
@@ -979,31 +836,24 @@
       }
       .finance-left {
         position: relative;
-        min-height: 550px;
+        min-height: 545px;
       }
       .quiz {
         position: absolute;
         inset: 0;
-      }
-      .quiz .amount {
-        font-size: 120px;
-        font-weight: 600;
-        margin: 16px 0;
-      }
-      .quiz .amount small {
-        font-size: 45px;
-      }
-      .quiz .question {
-        font-size: 85px;
-        margin-top: 48px;
-        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 42px;
       }
       .answer {
         position: relative;
       }
       .answer strong {
-        font-size: 123px;
+        display: block;
+        font-size: 110px;
         font-weight: 600;
+        line-height: 1.15;
       }
       .answer strong small {
         font-size: 45px;
@@ -1014,13 +864,14 @@
       .chart {
         display: block;
         width: 1000px;
-        height: 268px;
-        margin-top: 12px;
+        height: 200px;
+        margin-top: 8px;
       }
       .legend {
         display: flex;
         gap: 35px;
-        font-size: 24px;
+        font-size: 22px;
+        line-height: 1.5;
       }
       .legend span:before {
         content: "";
@@ -1081,8 +932,8 @@
       .finance-note {
         font-size: 22px;
         color: var(--muted);
-        line-height: 1.65;
-        margin-top: 25px;
+        line-height: 1.5;
+        margin-top: 18px;
       }
       .review-grid {
         display: grid;
@@ -1113,8 +964,8 @@
       }
       .closing {
         border-top: 2px solid var(--ink);
-        margin-top: 52px;
-        padding-top: 32px;
+        margin-top: 24px;
+        padding-top: 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1128,11 +979,8 @@
         font-size: 35px;
         white-space: nowrap;
         background: #fff;
-      }
-      .closing p {
-        font-size: 29px;
-        line-height: 1.7;
-        margin-top: 10px;
+        flex-shrink: 0;
+        margin-right: 30px;
       }
       .utility table {
         border-collapse: collapse;
@@ -1152,6 +1000,7 @@
         border: 1px solid var(--line);
         padding: 8px;
         font-size: 18px;
+        font-family: "Manrope", sans-serif;
       }
       .utility .disclaimer {
         font-size: 14px;
@@ -1173,64 +1022,12 @@
       .slide:not(.active):not(.visible) .step {
         visibility: hidden;
       }
-      .big-number {
-        line-height: 1.3;
-      }
-      .company {
-        font-family: "Manrope", sans-serif;
-        font-size: 112px;
-        line-height: 1.3;
-      }
-      .role {
-        font-size: 36px;
-        line-height: 1.6;
-      }
-      .work-summary {
-        font-size: 48px;
-        margin-top: 38px;
-      }
-      .work-meta {
-        margin-top: 30px;
-      }
       .numeral {
         font-family: "Manrope", sans-serif;
       }
-      .utility input {
-        font-family: "Manrope", sans-serif;
-      }
-      .ticket .total {
-        padding: 28px 0 16px;
-      }
-      .ticket .barcode {
-        height: 40px;
-        margin: 12px 28px;
-      }
-      .work-ticket {
-        height: 630px;
-      }
-      .work-ticket h2 {
-        margin: 0 0 22px;
-      }
-      .work-ticket .tenure {
-        font-family: "Manrope", "Noto Sans TC", sans-serif;
-        font-size: 86px;
-        line-height: 1.2;
-        margin: 24px 0 8px;
-      }
-      .work-ticket .error-code {
-        font-size: 27px;
-        padding: 20px;
-        margin-top: 25px;
-      }
       .closing > div {
         min-width: 0;
-      }
-      .closing p {
-        font-size: 26px;
-      }
-      .closing .stamp {
-        flex-shrink: 0;
-        margin-right: 30px;
+        flex: 1;
       }
       .closing .stamp s {
         display: block;
@@ -1248,50 +1045,17 @@
         line-height: 1.2;
         font-weight: 900;
       }
-      .closing {
-        margin-top: 24px;
-        padding-top: 18px;
-      }
-      .closing > div {
-        flex: 1;
-      }
-      .finance-left {
-        min-height: 545px;
-      }
       .answer .kicker {
         font-size: 24px;
         line-height: 1.4;
         margin-bottom: 4px;
       }
-      .answer strong {
-        display: block;
-        font-size: 110px;
-        line-height: 1.15;
-      }
       .answer > p:not(.kicker) {
         font-size: 26px;
         line-height: 1.5;
       }
-      .chart {
-        height: 200px;
-        margin-top: 8px;
-      }
-      .legend {
-        font-size: 22px;
-        line-height: 1.5;
-      }
-      .finance-note {
-        margin-top: 18px;
-        line-height: 1.5;
-      }
       .content.finance {
         margin-top: 24px;
-      }
-      .quiz {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 42px;
       }
       .quiz .finance-intro {
         font-size: 52px;
@@ -1349,16 +1113,6 @@
       }
       .active .employment-seal {
         animation: stamp-in 0.6s 0.5s both;
-      }
-      .relationship-mark {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .relationship-mark h3 {
-        margin-top: 0;
       }
       .relationship-notes-title {
         font-size: 30px;
@@ -1473,18 +1227,8 @@
       .slide[aria-label="職涯進度"] .section-head h2 {
         color: var(--text-blue);
       }
-      .work-ticket .tenure,
-      .org-chain strong {
+      .work-ticket .tenure {
         color: var(--text-teal);
-      }
-      .responsibility:nth-of-type(1) strong {
-        color: var(--text-blue);
-      }
-      .responsibility:nth-of-type(2) strong {
-        color: var(--text-teal);
-      }
-      .responsibility:nth-of-type(3) strong {
-        color: var(--text-berry);
       }
       .slide[aria-label="感情發展"] .section-head h2,
       .relationship-mark h3 {
@@ -1523,12 +1267,6 @@
         color: var(--text-teal);
       }
       @media print {
-        .compare.initial {
-          visibility: hidden !important;
-        }
-        .dragon-reveal {
-          position: relative !important;
-        }
         .quiz {
           display: none !important;
         }
@@ -1546,9 +1284,6 @@
         </symbol>
         <symbol id="pencil" viewBox="0 0 24 24">
           <path d="m16 3 5 5M4 16 16 4a2.8 2.8 0 0 1 4 4L8 20l-5 1 1-5Z" />
-        </symbol>
-        <symbol id="download" viewBox="0 0 24 24">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
         </symbol>
         <symbol id="expand" viewBox="0 0 24 24">
           <path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3" />
@@ -2170,8 +1905,6 @@
             element.classList.toggle("gone", gone);
             element.setAttribute("aria-hidden", String(gone));
           });
-          document.getElementById("previous").disabled = false;
-          document.getElementById("next").disabled = false;
         }
         maxSteps() {
           return Math.max(
@@ -2265,28 +1998,6 @@
             notice.textContent = "";
           }, 3500);
         }
-        download() {
-          this.saveEdits();
-          const copy = document.documentElement.cloneNode(true);
-          copy.querySelectorAll("[contenteditable]").forEach((element) => element.removeAttribute("contenteditable"));
-          copy.querySelectorAll("[inert]").forEach((element) => element.removeAttribute("inert"));
-          copy.querySelectorAll(".utility").forEach((element) => {
-            element.hidden = true;
-          });
-          copy.querySelector("#editToggle").classList.remove("active", "show");
-          copy.querySelector("#editToggle").setAttribute("aria-pressed", "false");
-          copy.querySelector("#notice").textContent = "";
-          const url = URL.createObjectURL(
-            new Blob(["<!doctype html>\n", copy.outerHTML], {
-              type: "text/html;charset=utf-8",
-            }),
-          );
-          const link = document.createElement("a");
-          link.href = url;
-          link.download = "willie-annual-report-2025.html";
-          link.click();
-          setTimeout(() => URL.revokeObjectURL(url), 10000);
-        }
         async fullscreen() {
           try {
             if (document.fullscreenElement) await document.exitFullscreen();
@@ -2300,7 +2011,6 @@
           document.getElementById("previous").onclick = () => this.previous();
           document.getElementById("notesButton").onclick = () => this.showNotes();
           document.getElementById("fullscreen").onclick = () => this.fullscreen();
-          document.getElementById("save")?.addEventListener("click", () => this.download());
           document.getElementById("editToggle").onclick = () => this.toggleEditing();
           document.querySelectorAll("[data-close]").forEach((button) => {
             button.onclick = () => this.closePanel();
@@ -2326,11 +2036,6 @@
             });
           });
           addEventListener("keydown", (event) => {
-            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "s") {
-              event.preventDefault();
-              this.download();
-              return;
-            }
             if (event.key === "Escape") {
               this.closePanel();
               if (this.editing) this.toggleEditing();
